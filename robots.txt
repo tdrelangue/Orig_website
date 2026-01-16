@@ -1,0 +1,7 @@
+# robots.txt for Orig accessibility consulting site
+
+User-agent: *
+Allow: /
+
+# Sitemap location (update with actual domain after deployment)
+Sitemap: https://www.example.com/sitemap.xml
