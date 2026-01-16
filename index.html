@@ -1,31 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Orig - Independent consultant specializing in WCAG 2.2 AA accessibility audits, cognitive usability, and eco-responsible digital design.">
+  <meta name="description" content="Orig - Audits indépendants d'accessibilité WCAG 2.2 AA, utilisabilité cognitive et sobriété numérique.">
   <meta name="theme-color" content="#0B63CE">
-  <title>Orig - Accessibility, Usability & Digital Sobriety Audits</title>
+  <title>Orig - Audits accessibilité, utilisabilité et sobriété numérique</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Skip to main content link for keyboard users -->
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">
+    <span data-lang="fr">Aller au contenu</span>
+    <span data-lang="en" hidden>Skip to content</span>
+  </a>
 
   <header>
-    <div class="container">
-      <div class="header-content">
-        <img src="assets/logo-removebg-preview.png" alt="Orig logo" class="logo" width="60" height="60">
+    <div class="container header-container">
+      <a href="#" class="header-brand" aria-label="Orig - Accueil">
+        <img src="assets/logo-removebg-preview.png" alt="" class="logo" width="48" height="48">
         <span class="brand-name">Orig</span>
-      </div>
-      <nav aria-label="Main navigation">
+      </a>
+
+      <nav aria-label="Navigation principale" id="main-nav">
         <ul class="nav-list">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#clients">Clients</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#services"><span data-lang="fr">Services</span><span data-lang="en" hidden>Services</span></a></li>
+          <li><a href="#process"><span data-lang="fr">Méthode</span><span data-lang="en" hidden>Process</span></a></li>
+          <li><a href="#clients"><span data-lang="fr">Pour qui</span><span data-lang="en" hidden>Who it's for</span></a></li>
+          <li><a href="#contact"><span data-lang="fr">Contact</span><span data-lang="en" hidden>Contact</span></a></li>
         </ul>
       </nav>
+
+      <!-- Language toggle - accessible fieldset with radio buttons -->
+      <fieldset class="lang-toggle">
+        <legend class="visually-hidden">
+          <span data-lang="fr">Langue du site</span>
+          <span data-lang="en" hidden>Site language</span>
+        </legend>
+        <div class="lang-options">
+          <label class="lang-option">
+            <input type="radio" name="language" value="fr" checked>
+            <span class="lang-label">FR</span>
+          </label>
+          <label class="lang-option">
+            <input type="radio" name="language" value="en">
+            <span class="lang-label">EN</span>
+          </label>
+        </div>
+      </fieldset>
     </div>
   </header>
 
@@ -33,140 +55,257 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="container">
-        <h1>Independent audits for accessible, usable, and sustainable digital products</h1>
-        <p class="hero-subtitle">Technical expertise in WCAG compliance, cognitive load reduction, and performance optimization.</p>
+        <h1>
+          <span data-lang="fr">Audits indépendants pour des interfaces accessibles, utilisables et sobres.</span>
+          <span data-lang="en" hidden>Independent audits for accessible, usable, and sustainable digital products.</span>
+        </h1>
+        <p class="hero-subtitle">
+          <span data-lang="fr">WCAG 2.2 AA, lecteurs d'écran, charge cognitive, performance et éco-conception.</span>
+          <span data-lang="en" hidden>WCAG 2.2 AA, screen readers, cognitive load, performance, and eco-design.</span>
+        </p>
       </div>
     </section>
 
-    <!-- What I Do Section -->
-    <section id="services" class="section">
+    <!-- Services Section -->
+    <section id="services" class="section section-alt">
       <div class="container">
-        <h2>What I do</h2>
+        <h2>
+          <span data-lang="fr">Ce que je fais</span>
+          <span data-lang="en" hidden>What I do</span>
+        </h2>
         <ul class="services-list">
-          <li>
-            <h3>Accessibility audits</h3>
-            <p>WCAG 2.2 AA compliance testing with screen readers and keyboard navigation patterns.</p>
+          <li class="service-card">
+            <h3>
+              <span data-lang="fr">Audit d'accessibilité</span>
+              <span data-lang="en" hidden>Accessibility audits</span>
+            </h3>
+            <p>
+              <span data-lang="fr">Tests WCAG 2.2 AA (clavier + lecteurs d'écran). Rapport priorisé.</span>
+              <span data-lang="en" hidden>WCAG 2.2 AA testing (keyboard + screen readers). Prioritized report.</span>
+            </p>
           </li>
-          <li>
-            <h3>Cognitive usability audits</h3>
-            <p>Interface evaluation focused on cognitive load, information architecture, and comprehension patterns.</p>
+          <li class="service-card">
+            <h3>
+              <span data-lang="fr">Audit d'utilisabilité cognitive</span>
+              <span data-lang="en" hidden>Cognitive usability audits</span>
+            </h3>
+            <p>
+              <span data-lang="fr">Charge cognitive, architecture de l'information, compréhension des parcours.</span>
+              <span data-lang="en" hidden>Cognitive load, information architecture, and journey comprehension.</span>
+            </p>
           </li>
-          <li>
-            <h3>Digital sobriety audits</h3>
-            <p>Performance measurement, page weight analysis, and eco-design compliance reviews.</p>
+          <li class="service-card">
+            <h3>
+              <span data-lang="fr">Audit de sobriété numérique</span>
+              <span data-lang="en" hidden>Digital sobriety audits</span>
+            </h3>
+            <p>
+              <span data-lang="fr">Poids des pages, performance, bonnes pratiques d'éco-conception (RGESN).</span>
+              <span data-lang="en" hidden>Page weight, performance, and eco-design best practices.</span>
+            </p>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- How I Work Section -->
+    <!-- Process Section -->
     <section id="process" class="section">
       <div class="container">
-        <h2>How I work</h2>
+        <h2>
+          <span data-lang="fr">Méthode</span>
+          <span data-lang="en" hidden>How I work</span>
+        </h2>
         <ol class="process-list">
           <li>
-            <strong>Initial assessment</strong>
-            <span>Review current state, identify scope, and define success criteria.</span>
+            <strong>
+              <span data-lang="fr">Cadrage</span>
+              <span data-lang="en" hidden>Scoping</span>
+            </strong>
+            <span class="process-desc">
+              <span data-lang="fr">Périmètre, objectifs, contraintes.</span>
+              <span data-lang="en" hidden>Scope, objectives, constraints.</span>
+            </span>
           </li>
           <li>
-            <strong>Technical audit</strong>
-            <span>Execute automated and manual testing across defined checkpoints.</span>
+            <strong>
+              <span data-lang="fr">Audit</span>
+              <span data-lang="en" hidden>Audit</span>
+            </strong>
+            <span class="process-desc">
+              <span data-lang="fr">Tests clavier/lecteurs d'écran + revue UI.</span>
+              <span data-lang="en" hidden>Keyboard/screen reader tests + UI review.</span>
+            </span>
           </li>
           <li>
-            <strong>Detailed reporting</strong>
-            <span>Document findings with severity levels, code examples, and remediation steps.</span>
+            <strong>
+              <span data-lang="fr">Synthèse</span>
+              <span data-lang="en" hidden>Summary</span>
+            </strong>
+            <span class="process-desc">
+              <span data-lang="fr">Constats, preuves, criticité.</span>
+              <span data-lang="en" hidden>Findings, evidence, severity.</span>
+            </span>
           </li>
           <li>
-            <strong>Implementation support</strong>
-            <span>Provide technical guidance during fix implementation and validation.</span>
+            <strong>
+              <span data-lang="fr">Recommandations</span>
+              <span data-lang="en" hidden>Recommendations</span>
+            </strong>
+            <span class="process-desc">
+              <span data-lang="fr">Actions priorisées, effort/impact.</span>
+              <span data-lang="en" hidden>Prioritized actions, effort/impact.</span>
+            </span>
           </li>
           <li>
-            <strong>Verification</strong>
-            <span>Re-test resolved issues and confirm compliance or performance targets.</span>
+            <strong>
+              <span data-lang="fr">Restitution</span>
+              <span data-lang="en" hidden>Handoff</span>
+            </strong>
+            <span class="process-desc">
+              <span data-lang="fr">Atelier court, Q/R, option re-test.</span>
+              <span data-lang="en" hidden>Short workshop, Q&A, optional re-test.</span>
+            </span>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- Who It's For Section -->
-    <section id="clients" class="section">
+    <!-- Clients Section -->
+    <section id="clients" class="section section-alt">
       <div class="container">
-        <h2>Who it's for</h2>
-        <p class="section-intro">This service is designed for organizations with specific compliance, usability, or sustainability requirements.</p>
+        <h2>
+          <span data-lang="fr">Pour qui</span>
+          <span data-lang="en" hidden>Who it's for</span>
+        </h2>
         <ul class="clients-list">
-          <li>Digital teams in regulated sectors requiring WCAG 2.2 AA compliance</li>
-          <li>Product teams targeting users with cognitive or visual impairments</li>
-          <li>Engineering and IT departments implementing accessibility standards</li>
-          <li>Marketing and communications teams ensuring inclusive content delivery</li>
-          <li>Organizations with carbon reduction or eco-design commitments</li>
-          <li>Internal compliance officers seeking independent validation</li>
+          <li>
+            <span data-lang="fr">PME, ETI et grands groupes</span>
+            <span data-lang="en" hidden>SMEs and large organizations</span>
+          </li>
+          <li>
+            <span data-lang="fr">Équipes produit, digital, communication, IT, conformité</span>
+            <span data-lang="en" hidden>Product, digital, communication, IT, and compliance teams</span>
+          </li>
+          <li>
+            <span data-lang="fr">Sites web, plateformes, outils internes existants</span>
+            <span data-lang="en" hidden>Existing websites, platforms, and internal tools</span>
+          </li>
+          <li>
+            <span data-lang="fr">Mise en conformité, refonte, dette UX/perf, accessibilité</span>
+            <span data-lang="en" hidden>Compliance, redesign, UX/perf debt, accessibility</span>
+          </li>
         </ul>
-        <p class="section-note">Not suitable for general UX optimization or conversion rate projects without clear accessibility or sustainability objectives.</p>
       </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section">
       <div class="container">
-        <h2>Contact</h2>
-        <p class="contact-intro">For audit inquiries or technical questions, send an email.</p>
-        <p class="contact-email">
-          <a href="mailto:contact@orig-audits.example">contact@orig-audits.example</a>
+        <h2>
+          <span data-lang="fr">Contact</span>
+          <span data-lang="en" hidden>Contact</span>
+        </h2>
+        <p class="contact-intro">
+          <span data-lang="fr">Pour une demande ou un premier échange :</span>
+          <span data-lang="en" hidden>For inquiries or an initial discussion:</span>
         </p>
+        <address class="contact-details">
+          <p class="contact-email">
+            <a href="mailto:tdrelangue@gmail.com">tdrelangue@gmail.com</a>
+          </p>
+          <p class="contact-address">
+            47 chemin du Peyroux, 19360 Malemort
+          </p>
+        </address>
 
         <div class="form-container">
           <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-labelledby="form-heading">
-            <h3 id="form-heading">Send a message</h3>
+            <h3 id="form-heading">
+              <span data-lang="fr">Envoyer un message</span>
+              <span data-lang="en" hidden>Send a message</span>
+            </h3>
 
             <!-- Honeypot field for spam prevention -->
-            <p class="hidden">
-              <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            <p class="honeypot">
+              <label>Do not fill: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
             </p>
 
             <div class="form-group">
-              <label for="name">Name</label>
+              <label for="name">
+                <span data-lang="fr">Nom</span>
+                <span data-lang="en" hidden>Name</span>
+              </label>
               <input type="text" id="name" name="name" required autocomplete="name">
             </div>
 
             <div class="form-group">
-              <label for="email">Email</label>
+              <label for="email">
+                <span data-lang="fr">Email</span>
+                <span data-lang="en" hidden>Email</span>
+              </label>
               <input type="email" id="email" name="email" required autocomplete="email">
             </div>
 
             <div class="form-group">
-              <label for="organization">Organization</label>
+              <label for="organization">
+                <span data-lang="fr">Organisation</span>
+                <span data-lang="en" hidden>Organization</span>
+              </label>
               <input type="text" id="organization" name="organization" autocomplete="organization">
             </div>
 
             <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="6" required></textarea>
+              <label for="message">
+                <span data-lang="fr">Message</span>
+                <span data-lang="en" hidden>Message</span>
+              </label>
+              <textarea id="message" name="message" rows="5" required></textarea>
             </div>
 
             <div class="form-actions">
-              <button type="submit">Send message</button>
+              <button type="submit">
+                <span data-lang="fr">Envoyer</span>
+                <span data-lang="en" hidden>Send</span>
+              </button>
             </div>
 
-            <p class="form-note">This form uses Netlify Forms. Deploy to Netlify to enable submission.</p>
+            <p class="form-note">
+              <span data-lang="fr">Formulaire Netlify. Déployez sur Netlify pour activer.</span>
+              <span data-lang="en" hidden>Netlify form. Deploy to Netlify to enable.</span>
+            </p>
           </form>
         </div>
       </div>
     </section>
 
     <!-- Privacy Section -->
-    <section id="privacy" class="section section-compact">
+    <section id="privacy" class="section section-compact section-alt">
       <div class="container">
-        <h2>Privacy</h2>
-        <p>This site collects no analytics, uses no tracking cookies, and loads no third-party scripts. Form submissions via Netlify Forms are processed according to <a href="https://www.netlify.com/privacy/" rel="external noopener">Netlify's privacy policy</a>. Submitted data is used only to respond to inquiries and is not shared with third parties.</p>
+        <h2>
+          <span data-lang="fr">Confidentialité</span>
+          <span data-lang="en" hidden>Privacy</span>
+        </h2>
+        <p>
+          <span data-lang="fr">Ce site ne collecte aucune donnée analytique, n'utilise pas de cookies de suivi et ne charge aucun script tiers. Les soumissions via Netlify Forms sont traitées selon la <a href="https://www.netlify.com/privacy/" rel="external noopener">politique Netlify</a>.</span>
+          <span data-lang="en" hidden>This site collects no analytics, uses no tracking cookies, and loads no third-party scripts. Netlify Forms submissions are processed per <a href="https://www.netlify.com/privacy/" rel="external noopener">Netlify's policy</a>.</span>
+        </p>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>Orig &mdash; Independent accessibility and digital sobriety consultant</p>
-      <p>Location placeholder &middot; <a href="mailto:contact@orig-audits.example">contact@orig-audits.example</a></p>
-      <p class="footer-note">This site is designed to meet WCAG 2.2 AA standards and minimize environmental impact.</p>
+      <p class="footer-brand">
+        <span data-lang="fr">Orig — Consultant indépendant accessibilité et sobriété numérique</span>
+        <span data-lang="en" hidden>Orig — Independent accessibility and digital sobriety consultant</span>
+      </p>
+      <p class="footer-contact">
+        47 chemin du Peyroux, 19360 Malemort · <a href="mailto:tdrelangue@gmail.com">tdrelangue@gmail.com</a>
+      </p>
+      <p class="footer-note">
+        <span data-lang="fr">Site conçu WCAG 2.2 AA, impact environnemental minimal.</span>
+        <span data-lang="en" hidden>WCAG 2.2 AA compliant, minimal environmental impact.</span>
+      </p>
     </div>
   </footer>
 
