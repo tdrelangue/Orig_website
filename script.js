@@ -44,8 +44,9 @@
    * Set the active language
    */
   function setLanguage(lang) {
-    // Update HTML lang attribute
+    // Update HTML lang attribute and data-lang attribute
     document.documentElement.lang = lang;
+    document.documentElement.setAttribute('data-lang', lang);
 
     // Update page title
     document.title = lang === 'en'
@@ -63,8 +64,8 @@
       }
     }
 
-    // Update radio button state
-    var radios = document.querySelectorAll('input[name="language"]');
+    // Update radio button state for both desktop and mobile groups
+    var radios = document.querySelectorAll('input[name="language-desktop"], input[name="language-mobile"]');
     for (var j = 0; j < radios.length; j++) {
       radios[j].checked = radios[j].value === lang;
     }
@@ -97,7 +98,7 @@
    * Setup language toggle listeners
    */
   function setupLanguageToggle() {
-    var radios = document.querySelectorAll('input[name="language"]');
+    var radios = document.querySelectorAll('input[name="language-desktop"], input[name="language-mobile"]');
     for (var i = 0; i < radios.length; i++) {
       radios[i].addEventListener('change', handleLanguageChange);
     }

@@ -101,15 +101,23 @@ With JavaScript disabled, French content displays (no `hidden` on FR spans by de
 
 **Check at each step**: Focus ring is visible on every focused element.
 
-### 2. Language Toggle
+### 2. Language Toggle & Affordance
 
 | Step | Action | Expected |
 |------|--------|----------|
-| 1 | Load page | French content visible; `<html lang="fr">` |
-| 2 | Click EN radio | All content switches to English; `<html lang="en">` |
-| 3 | Reload page | English persists (localStorage) |
-| 4 | Add `?lang=fr` to URL | French shown, overrides localStorage |
-| 5 | Toggle back to FR | French content; nav says "Services / Méthode / Pour qui / Contact" |
+| 1 | Load page | French content visible; `<html lang="fr" data-lang="fr">` |
+| 2 | Check FR label in desktop toggle | FR is brand blue (#0B63CE), underlined, bold (font-weight: 700) |
+| 3 | Check EN label | EN is neutral/muted color, no underline |
+| 4 | Click EN radio | All content switches to English; EN now blue + underlined + bold; FR neutral |
+| 5 | Reload page | English persists (localStorage) |
+| 6 | Add `?lang=fr` to URL | French shown, overrides localStorage |
+| 7 | Toggle back to FR | French content; FR is blue + underlined + bold |
+
+**Screen reader test for language toggle**:
+| Step | Action | Expected |
+|------|--------|----------|
+| 1 | Navigate to FR radio (checked) | Announced with "(actuel)" in French mode or "(current)" in English mode |
+| 2 | The non-active option | Does NOT announce "(actuel)"/"(current)" |
 
 ### 3. Screen Reader (NVDA)
 
@@ -134,9 +142,10 @@ Test at 375px width in Chrome DevTools:
 | 1 | Load page at 375px width | Header shows logo + "Menu" button only; nav links not visible inline |
 | 2 | Click Menu button | Menu panel opens below header with nav links and language toggle |
 | 3 | Click a section link (e.g., Services) | Menu closes and page scrolls to section |
-| 4 | Open menu, toggle FR/EN | Content switches language; menu remains usable |
-| 5 | Open menu, press Escape | Menu closes, focus returns to Menu button |
-| 6 | Resize to 640px+ | Menu button disappears; desktop nav and language toggle visible |
+| 4 | Open menu, check language toggle | Active language is blue + underlined + bold (same affordance as desktop) |
+| 5 | Open menu, toggle FR/EN | Content switches language; affordance updates correctly |
+| 6 | Open menu, press Escape | Menu closes, focus returns to Menu button |
+| 7 | Resize to 768px+ | Menu button disappears; desktop nav and language toggle visible |
 
 **Keyboard test (mobile width)**:
 | Step | Action | Expected |
@@ -152,20 +161,29 @@ Test at 375px width in Chrome DevTools:
 | 1 | Navigate to Menu button | Announced as "Menu, button, collapsed" |
 | 2 | Activate button | Announced as "Menu, button, expanded"; menu content accessible |
 | 3 | When menu closed | Menu panel content NOT read (hidden from accessibility tree) |
-| 4 | Navigate language radios | Announced as "Langue" group with FR/EN options |
+| 4 | Navigate language radios | Announced as "Langue" group with FR/EN options; active has "(actuel)" |
 
-### 5. Desktop Responsiveness
+### 5. Desktop Responsiveness & Nav Stacking
 
-Test at these widths:
+**Critical test - resize from 320px to 1400px slowly**:
+
+| Width Range | Expected |
+|-------------|----------|
+| 320px - 767px | Mobile menu button visible; nav links hidden; NO nav wrapping |
+| 768px+ | Desktop nav visible inline; NO nav items stacking/wrapping |
+
+Test at these specific widths:
 
 | Width | Expected |
 |-------|----------|
-| 640px | Nav inline; 2-col cards; Menu button hidden |
+| 767px | Mobile menu still active; Menu button visible |
+| 768px | Nav inline; Menu button hidden; no wrapping |
 | 900px+ | Full layout; 3-col cards |
 
 **Check**:
 - No horizontal scroll
 - Text readable at all sizes
+- Nav items NEVER wrap/stack at any width (either inline or hidden in menu)
 - Language toggle always accessible (desktop: header; mobile: in menu)
 - No layout breaking
 

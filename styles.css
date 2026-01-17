@@ -11,7 +11,7 @@
 
   /* Background colors */
   --bg: #F7F9FC;
-  --bg-alt: #EBF1F8;
+  --bg-alt: #a8cef8;
   --bg-light: #FFFFFF;
   --bg-panel: #FFFFFF;
 
@@ -274,7 +274,7 @@ nav a:focus {
   display: block;
   padding: 0.375rem 0.75rem;
   font-size: 0.8125rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-muted);
   border-radius: calc(var(--radius-md) - 2px);
   transition: background-color 0.1s ease, color 0.1s ease;
@@ -284,6 +284,9 @@ nav a:focus {
 .lang-option input[type="radio"]:checked + .lang-label {
   background: var(--brand);
   color: #fff;
+  font-weight: 700;
+  text-decoration-color: #fff;
+  text-underline-offset: 2px;
 }
 
 .lang-option input[type="radio"]:focus + .lang-label {
@@ -297,6 +300,15 @@ nav a:focus {
 
 .lang-option input[type="radio"]:checked + .lang-label:hover {
   background: var(--brand-dark);
+}
+
+/* Show (actuel)/(current) only on checked radio */
+.lang-current {
+  display: none;
+}
+
+.lang-option input[type="radio"]:checked + .lang-label .lang-current {
+  display: inline;
 }
 
 /* ===========================
@@ -416,7 +428,7 @@ nav a:focus {
 }
 
 /* Header responsive */
-@media (max-width: 639px) {
+@media (max-width: 767px) {
   .header-container {
     justify-content: space-between;
     flex-wrap: wrap;
@@ -444,10 +456,13 @@ nav a:focus {
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .header-container {
     flex-wrap: nowrap;
     justify-content: flex-start;
+  }
+  .nav-list {
+    flex-wrap: nowrap;
   }
   .desktop-nav {
     margin-left: var(--space-lg);

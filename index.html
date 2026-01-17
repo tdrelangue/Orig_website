@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,19 +34,19 @@
       </nav>
 
       <!-- Desktop language toggle -->
-      <fieldset class="lang-toggle desktop-lang">
+      <fieldset class="lang-toggle desktop-lang lang-switch">
         <legend class="visually-hidden">
           <span data-lang="fr">Langue du site</span>
           <span data-lang="en" hidden>Site language</span>
         </legend>
         <div class="lang-options">
-          <label class="lang-option">
-            <input type="radio" name="language" value="fr" checked>
-            <span class="lang-label">FR</span>
+          <label class="lang-option" for="lang-fr-desktop">
+            <input type="radio" name="language-desktop" id="lang-fr-desktop" value="fr" checked>
+            <span class="lang-label">FR<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
           </label>
-          <label class="lang-option">
-            <input type="radio" name="language" value="en">
-            <span class="lang-label">EN</span>
+          <label class="lang-option" for="lang-en-desktop">
+            <input type="radio" name="language-desktop" id="lang-en-desktop" value="en">
+            <span class="lang-label">EN<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
           </label>
         </div>
       </fieldset>
@@ -69,19 +69,19 @@
           </ul>
         </nav>
 
-        <fieldset class="mobile-lang-toggle">
+        <fieldset class="mobile-lang-toggle lang-switch">
           <legend>
             <span data-lang="fr">Langue</span>
             <span data-lang="en" hidden>Language</span>
           </legend>
           <div class="lang-options">
-            <label class="lang-option">
-              <input type="radio" name="language" value="fr" checked>
-              <span class="lang-label">FR</span>
+            <label class="lang-option" for="lang-fr-mobile">
+              <input type="radio" name="language-mobile" id="lang-fr-mobile" value="fr" checked>
+              <span class="lang-label">FR<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
             </label>
-            <label class="lang-option">
-              <input type="radio" name="language" value="en">
-              <span class="lang-label">EN</span>
+            <label class="lang-option" for="lang-en-mobile">
+              <input type="radio" name="language-mobile" id="lang-en-mobile" value="en">
+              <span class="lang-label">EN<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
             </label>
           </div>
         </fieldset>
