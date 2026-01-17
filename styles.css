@@ -6,6 +6,7 @@
   /* Brand colors - matching logo blue */
   --brand: #0B63CE;
   --brand-light: #71b1ff;
+  --brand-lighter: #e2efff;
   --brand-dark: #084A9C;
   --brand-subtle: rgba(11, 99, 206, 0.08);
 
@@ -252,7 +253,7 @@ nav a:focus {
 .lang-options {
   display: flex;
   gap: 2px;
-  background: var(--bg-alt);
+  background: var(--brand-lighter);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 3px;
@@ -320,7 +321,7 @@ nav a:focus {
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 0.75rem;
-  background: var(--bg-alt);
+  background: var(--brand-lighter);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   font-family: inherit;
@@ -705,7 +706,7 @@ main {
 .contact-email a {
   font-size: 1.125rem;
   font-weight: 600;
-  color: var(--brand);
+  color: var(--brand-dark);
   text-decoration: none;
 }
 
