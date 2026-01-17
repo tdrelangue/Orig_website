@@ -673,7 +673,7 @@ main {
 
 .clients-list li {
   padding: var(--space-sm) var(--space-md);
-  border-left: 3px solid var(--brand-light);
+  border-left: 3px solid var(--brand-dark);
   background: var(--bg-light);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   color: var(--text-muted);
