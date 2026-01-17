@@ -278,6 +278,64 @@
   }
 
   // =========================
+  // Mobile Menu
+  // =========================
+
+  var mobileMenuBtn = null;
+  var mobileMenu = null;
+  var isMenuOpen = false;
+
+  function openMobileMenu() {
+    if (!mobileMenu || !mobileMenuBtn) return;
+    isMenuOpen = true;
+    mobileMenu.removeAttribute('hidden');
+    mobileMenuBtn.setAttribute('aria-expanded', 'true');
+    document.addEventListener('keydown', handleMenuEscape);
+  }
+
+  function closeMobileMenu(returnFocus) {
+    if (!mobileMenu || !mobileMenuBtn) return;
+    isMenuOpen = false;
+    mobileMenu.setAttribute('hidden', '');
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    document.removeEventListener('keydown', handleMenuEscape);
+    if (returnFocus !== false) {
+      mobileMenuBtn.focus();
+    }
+  }
+
+  function toggleMobileMenu() {
+    if (isMenuOpen) {
+      closeMobileMenu(true);
+    } else {
+      openMobileMenu();
+    }
+  }
+
+  function handleMenuEscape(e) {
+    if (e.key === 'Escape' && isMenuOpen) {
+      closeMobileMenu(true);
+    }
+  }
+
+  function handleMenuLinkClick(e) {
+    var target = e.target.closest('a[href^="#"]');
+    if (target && isMenuOpen) {
+      closeMobileMenu(false);
+    }
+  }
+
+  function setupMobileMenu() {
+    mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    mobileMenu = document.getElementById('mobile-menu');
+
+    if (!mobileMenuBtn || !mobileMenu) return;
+
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    mobileMenu.addEventListener('click', handleMenuLinkClick);
+  }
+
+  // =========================
   // Initialize
   // =========================
 
@@ -286,6 +344,7 @@
     setupLanguageToggle();
     setupFormValidation();
     setupSmoothScroll();
+    setupMobileMenu();
   }
 
   // Run on DOM ready

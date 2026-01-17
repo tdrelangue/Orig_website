@@ -23,7 +23,8 @@
         <span class="brand-name">Orig</span>
       </a>
 
-      <nav aria-label="Navigation principale" id="main-nav">
+      <!-- Desktop navigation -->
+      <nav aria-label="Navigation principale" id="main-nav" class="desktop-nav">
         <ul class="nav-list">
           <li><a href="#services"><span data-lang="fr">Services</span><span data-lang="en" hidden>Services</span></a></li>
           <li><a href="#process"><span data-lang="fr">Méthode</span><span data-lang="en" hidden>Process</span></a></li>
@@ -32,8 +33,8 @@
         </ul>
       </nav>
 
-      <!-- Language toggle - accessible fieldset with radio buttons -->
-      <fieldset class="lang-toggle">
+      <!-- Desktop language toggle -->
+      <fieldset class="lang-toggle desktop-lang">
         <legend class="visually-hidden">
           <span data-lang="fr">Langue du site</span>
           <span data-lang="en" hidden>Site language</span>
@@ -49,6 +50,42 @@
           </label>
         </div>
       </fieldset>
+
+      <!-- Mobile menu button -->
+      <button type="button" class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="mobile-menu-icon" aria-hidden="true"></span>
+        <span data-lang="fr">Menu</span>
+        <span data-lang="en" hidden>Menu</span>
+      </button>
+
+      <!-- Mobile menu panel -->
+      <div id="mobile-menu" class="mobile-menu" hidden>
+        <nav aria-label="Navigation principale mobile">
+          <ul class="mobile-nav-list">
+            <li><a href="#services"><span data-lang="fr">Services</span><span data-lang="en" hidden>Services</span></a></li>
+            <li><a href="#process"><span data-lang="fr">Méthode</span><span data-lang="en" hidden>Process</span></a></li>
+            <li><a href="#clients"><span data-lang="fr">Pour qui</span><span data-lang="en" hidden>Who it's for</span></a></li>
+            <li><a href="#contact"><span data-lang="fr">Contact</span><span data-lang="en" hidden>Contact</span></a></li>
+          </ul>
+        </nav>
+
+        <fieldset class="mobile-lang-toggle">
+          <legend>
+            <span data-lang="fr">Langue</span>
+            <span data-lang="en" hidden>Language</span>
+          </legend>
+          <div class="lang-options">
+            <label class="lang-option">
+              <input type="radio" name="language" value="fr" checked>
+              <span class="lang-label">FR</span>
+            </label>
+            <label class="lang-option">
+              <input type="radio" name="language" value="en">
+              <span class="lang-label">EN</span>
+            </label>
+          </div>
+        </fieldset>
+      </div>
     </div>
   </header>
 

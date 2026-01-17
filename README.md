@@ -125,23 +125,51 @@ With JavaScript disabled, French content displays (no `hidden` on FR spans by de
 
 **Critical check**: Inactive language content (hidden attribute) must NOT be read.
 
-### 4. Responsiveness
+### 4. Mobile Menu (Phone Widths)
+
+Test at 375px width in Chrome DevTools:
+
+| Step | Action | Expected |
+|------|--------|----------|
+| 1 | Load page at 375px width | Header shows logo + "Menu" button only; nav links not visible inline |
+| 2 | Click Menu button | Menu panel opens below header with nav links and language toggle |
+| 3 | Click a section link (e.g., Services) | Menu closes and page scrolls to section |
+| 4 | Open menu, toggle FR/EN | Content switches language; menu remains usable |
+| 5 | Open menu, press Escape | Menu closes, focus returns to Menu button |
+| 6 | Resize to 640px+ | Menu button disappears; desktop nav and language toggle visible |
+
+**Keyboard test (mobile width)**:
+| Step | Action | Expected |
+|------|--------|----------|
+| 1 | Tab to Menu button | Focus ring visible on Menu button |
+| 2 | Press Enter or Space | Menu opens (aria-expanded="true") |
+| 3 | Tab through menu | Focus moves through nav links, then language radios |
+| 4 | Press Escape | Menu closes, focus returns to Menu button |
+
+**Screen reader test (NVDA at mobile width)**:
+| Step | Action | Expected |
+|------|--------|----------|
+| 1 | Navigate to Menu button | Announced as "Menu, button, collapsed" |
+| 2 | Activate button | Announced as "Menu, button, expanded"; menu content accessible |
+| 3 | When menu closed | Menu panel content NOT read (hidden from accessibility tree) |
+| 4 | Navigate language radios | Announced as "Langue" group with FR/EN options |
+
+### 5. Desktop Responsiveness
 
 Test at these widths:
 
 | Width | Expected |
 |-------|----------|
-| 320px | Nav stacks below brand+toggle; 1-col cards |
-| 640px | Nav inline; 2-col cards |
+| 640px | Nav inline; 2-col cards; Menu button hidden |
 | 900px+ | Full layout; 3-col cards |
 
 **Check**:
 - No horizontal scroll
 - Text readable at all sizes
-- Language toggle always accessible
+- Language toggle always accessible (desktop: header; mobile: in menu)
 - No layout breaking
 
-### 5. Performance (Lighthouse)
+### 6. Performance (Lighthouse)
 
 Run in Chrome DevTools (F12 → Lighthouse → Mobile):
 
