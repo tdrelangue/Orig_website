@@ -270,9 +270,9 @@
           e.preventDefault();
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-          // Move focus to target for keyboard users
+          // Move focus to target for keyboard users without re-scrolling
           target.setAttribute('tabindex', '-1');
-          target.focus();
+          target.focus({ preventScroll: true });
         }
       });
     }
@@ -337,6 +337,25 @@
   }
 
   // =========================
+  // Scroll Effects (optional)
+  // =========================
+
+  /**
+   * Enable optional scroll effects via ?effects=1 query param
+   * Adds data-effects="on" to <html> for CSS sticky titles
+   */
+  function setupScrollEffects() {
+    try {
+      var urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('effects') === '1') {
+        document.documentElement.setAttribute('data-effects', 'on');
+      }
+    } catch (e) {
+      // URLSearchParams not available
+    }
+  }
+
+  // =========================
   // Initialize
   // =========================
 
@@ -346,6 +365,7 @@
     setupFormValidation();
     setupSmoothScroll();
     setupMobileMenu();
+    setupScrollEffects();
   }
 
   // Run on DOM ready

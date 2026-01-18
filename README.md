@@ -169,16 +169,16 @@ Test at 375px width in Chrome DevTools:
 
 | Width Range | Expected |
 |-------------|----------|
-| 320px - 767px | Mobile menu button visible; nav links hidden; NO nav wrapping |
-| 768px+ | Desktop nav visible inline; NO nav items stacking/wrapping |
+| 320px - 919px | Mobile menu button visible; nav links hidden; NO nav wrapping |
+| 920px+ | Desktop nav visible inline; NO nav items stacking/wrapping |
 
 Test at these specific widths:
 
 | Width | Expected |
 |-------|----------|
-| 767px | Mobile menu still active; Menu button visible |
-| 768px | Nav inline; Menu button hidden; no wrapping |
-| 900px+ | Full layout; 3-col cards |
+| 919px | Mobile menu still active; Menu button visible |
+| 920px | Nav inline; Menu button hidden; no wrapping |
+| 1100px+ | Full layout; 3-col cards |
 
 **Check**:
 - No horizontal scroll
@@ -187,7 +187,32 @@ Test at these specific widths:
 - Language toggle always accessible (desktop: header; mobile: in menu)
 - No layout breaking
 
-### 6. Performance (Lighthouse)
+### 6. Anchor Scroll (Mobile)
+
+Test on phone or at 375px width:
+
+| Step | Action | Expected |
+|------|--------|----------|
+| 1 | Open mobile menu | Menu panel visible |
+| 2 | Tap "Services" link | Page scrolls; "Services" heading visible below header (not hidden under it) |
+| 3 | Tap "Méthode" link | Page scrolls; "Méthode" heading visible below header |
+| 4 | Tap "Contact" link | Page scrolls; "Contact" heading visible below header |
+
+**Critical check**: Section headings must NOT be hidden under the sticky header after tapping nav links.
+
+### 7. Scroll Effects (Optional)
+
+Test with `?effects=1` query parameter:
+
+| Step | Action | Expected |
+|------|--------|----------|
+| 1 | Load page with `?effects=1` | Page loads normally |
+| 2 | Scroll through Services section | "Ce que je fais" / "What I do" heading stays sticky at top while scrolling within section |
+| 3 | Scroll past section | Heading scrolls away as next section begins |
+| 4 | Enable `prefers-reduced-motion: reduce` in browser | Sticky effect disabled; normal scroll behavior |
+| 5 | Load page without `?effects=1` | No sticky heading effect |
+
+### 8. Performance (Lighthouse)
 
 Run in Chrome DevTools (F12 → Lighthouse → Mobile):
 
@@ -249,6 +274,35 @@ Edit `--brand` in `styles.css`:
   --brand: #0B63CE;
 }
 ```
+
+### Header Offset
+
+The `--header-offset` variable (default: `80px`) controls scroll positioning for anchor links. It ensures section headings are visible below the sticky header when navigating. Adjust if your header height changes:
+
+```css
+:root {
+  --header-offset: 80px;
+}
+```
+
+This variable is used by:
+- `scroll-padding-top` on `<html>` for native anchor scrolling
+- `scroll-margin-top` on `.section` elements
+- Sticky section titles (when effects enabled)
+
+### Responsive Breakpoint
+
+The mobile/desktop nav breakpoint is **920px**. Below this width, the hamburger menu appears. This prevents nav items from wrapping at mid-widths.
+
+### Scroll Effects (Experimental)
+
+Enable sticky section titles that "linger" during scroll:
+
+```
+https://yoursite.com/?effects=1
+```
+
+This adds `data-effects="on"` to `<html>`, making section `<h2>` elements sticky within their section. Automatically disabled when `prefers-reduced-motion: reduce` is set.
 
 ### Contact Info
 

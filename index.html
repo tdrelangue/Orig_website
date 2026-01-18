@@ -27,8 +27,8 @@
       <nav aria-label="Navigation principale" id="main-nav" class="desktop-nav">
         <ul class="nav-list">
           <li><a href="#services"><span data-lang="fr">Services</span><span data-lang="en" hidden>Services</span></a></li>
-          <li><a href="#process"><span data-lang="fr">Méthode</span><span data-lang="en" hidden>Process</span></a></li>
           <li><a href="#clients"><span data-lang="fr">Pour qui</span><span data-lang="en" hidden>Who it's for</span></a></li>
+          <li><a href="#process"><span data-lang="fr">Méthode</span><span data-lang="en" hidden>Process</span></a></li>
           <li><a href="#contact"><span data-lang="fr">Contact</span><span data-lang="en" hidden>Contact</span></a></li>
         </ul>
       </nav>
@@ -63,8 +63,8 @@
         <nav aria-label="Navigation principale mobile">
           <ul class="mobile-nav-list">
             <li><a href="#services"><span data-lang="fr">Services</span><span data-lang="en" hidden>Services</span></a></li>
-            <li><a href="#process"><span data-lang="fr">Méthode</span><span data-lang="en" hidden>Process</span></a></li>
             <li><a href="#clients"><span data-lang="fr">Pour qui</span><span data-lang="en" hidden>Who it's for</span></a></li>
+            <li><a href="#process"><span data-lang="fr">Méthode</span><span data-lang="en" hidden>Process</span></a></li>
             <li><a href="#contact"><span data-lang="fr">Contact</span><span data-lang="en" hidden>Contact</span></a></li>
           </ul>
         </nav>
@@ -105,53 +105,177 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section section-alt">
+    <section id="services" class="section section--services">
       <div class="container">
         <h2>
           <span data-lang="fr">Ce que je fais</span>
           <span data-lang="en" hidden>What I do</span>
         </h2>
-        <ul class="services-list">
-          <li class="service-card">
-            <h3>
-              <span data-lang="fr">Audit d'accessibilité</span>
-              <span data-lang="en" hidden>Accessibility audits</span>
-            </h3>
-            <p>
-              <span data-lang="fr">Tests WCAG 2.2 AA (clavier + lecteurs d'écran). Rapport priorisé.</span>
-              <span data-lang="en" hidden>WCAG 2.2 AA testing (keyboard + screen readers). Prioritized report.</span>
-            </p>
+        <div class="services-list">
+          <!-- Accessibility Audit Card -->
+          <details class="service-card">
+            <summary class="service-summary">
+              <h3>
+                <span data-lang="fr">Audit d'accessibilité</span>
+                <span data-lang="en" hidden>Accessibility audit</span>
+              </h3>
+              <p class="service-tagline">
+                <span data-lang="fr">Tests WCAG 2.2 AA (clavier + lecteurs d'écran).</span>
+                <span data-lang="en" hidden>WCAG 2.2 AA testing (keyboard + screen readers).</span>
+              </p>
+              <span class="service-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="service-details">
+              <div data-lang="fr">
+                <p>Évaluation complète de la conformité aux critères WCAG 2.2 niveau AA, le standard international pour l'accessibilité web.</p>
+                <ul>
+                  <li>Tests manuels au clavier et avec lecteurs d'écran (NVDA, VoiceOver)</li>
+                  <li>Vérification du contraste, de la structure sémantique et des alternatives textuelles</li>
+                  <li>Analyse des formulaires, de la navigation et des composants interactifs</li>
+                  <li>Rapport priorisé : constats, preuves, criticité et recommandations</li>
+                </ul>
+                <p class="service-links">
+                  <a href="https://www.w3.org/WAI/WCAG22/quickref/" rel="external noopener">Référence rapide WCAG 2.2</a>
+                </p>
+              </div>
+              <div data-lang="en" hidden>
+                <p>Comprehensive evaluation of compliance with WCAG 2.2 Level AA criteria, the international standard for web accessibility.</p>
+                <ul>
+                  <li>Manual keyboard and screen reader testing (NVDA, VoiceOver)</li>
+                  <li>Contrast, semantic structure, and text alternatives verification</li>
+                  <li>Analysis of forms, navigation, and interactive components</li>
+                  <li>Prioritized report: findings, evidence, severity, and recommendations</li>
+                </ul>
+                <p class="service-links">
+                  <a href="https://www.w3.org/WAI/WCAG22/quickref/" rel="external noopener">WCAG 2.2 Quick Reference</a>
+                </p>
+              </div>
+            </div>
+          </details>
+
+          <!-- Cognitive Usability Audit Card -->
+          <details class="service-card">
+            <summary class="service-summary">
+              <h3>
+                <span data-lang="fr">Audit d'utilisabilité cognitive</span>
+                <span data-lang="en" hidden>Cognitive usability audit</span>
+              </h3>
+              <p class="service-tagline">
+                <span data-lang="fr">Réduction de charge cognitive et clarification des parcours.</span>
+                <span data-lang="en" hidden>Reduce cognitive load and clarify user journeys.</span>
+              </p>
+              <span class="service-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="service-details">
+              <div data-lang="fr">
+                <p>Analyse centrée sur la compréhension et la facilité d'utilisation, au-delà des critères techniques d'accessibilité.</p>
+                <ul>
+                  <li>Évaluation de la charge cognitive : complexité visuelle, densité d'information</li>
+                  <li>Clarté du langage et des instructions</li>
+                  <li>Architecture de l'information et logique de navigation</li>
+                  <li>Prévention des erreurs et gestion des états</li>
+                  <li>Recommandations concrètes pour simplifier les parcours</li>
+                </ul>
+                <p class="service-links">
+                  <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation.html" rel="external noopener">Comprendre la navigation cohérente (WCAG)</a>
+                </p>
+              </div>
+              <div data-lang="en" hidden>
+                <p>Analysis focused on comprehension and ease of use, beyond technical accessibility criteria.</p>
+                <ul>
+                  <li>Cognitive load evaluation: visual complexity, information density</li>
+                  <li>Language and instruction clarity</li>
+                  <li>Information architecture and navigation logic</li>
+                  <li>Error prevention and state management</li>
+                  <li>Concrete recommendations to simplify user journeys</li>
+                </ul>
+                <p class="service-links">
+                  <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation.html" rel="external noopener">Understanding Consistent Navigation (WCAG)</a>
+                </p>
+              </div>
+            </div>
+          </details>
+
+          <!-- Digital Sobriety Audit Card -->
+          <details class="service-card">
+            <summary class="service-summary">
+              <h3>
+                <span data-lang="fr">Audit de sobriété numérique</span>
+                <span data-lang="en" hidden>Digital sobriety audit</span>
+              </h3>
+              <p class="service-tagline">
+                <span data-lang="fr">Poids, performance et bonnes pratiques d'éco-conception.</span>
+                <span data-lang="en" hidden>Page weight, performance, and eco-design practices.</span>
+              </p>
+              <span class="service-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="service-details">
+              <div data-lang="fr">
+                <p>Analyse de l'impact environnemental et de la performance technique de vos interfaces numériques.</p>
+                <ul>
+                  <li>Mesure du poids des pages et des requêtes réseau</li>
+                  <li>Audit de performance (Core Web Vitals, temps de chargement)</li>
+                  <li>Identification des ressources superflues (scripts, médias, dépendances)</li>
+                  <li>Recommandations basées sur le RGESN (Référentiel Général d'Écoconception)</li>
+                  <li>Actions concrètes pour réduire CPU, bande passante et complexité</li>
+                </ul>
+                <p class="service-links">
+                  <a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" rel="external noopener">RGESN - Référentiel d'écoconception</a>
+                </p>
+              </div>
+              <div data-lang="en" hidden>
+                <p>Analysis of the environmental impact and technical performance of your digital interfaces.</p>
+                <ul>
+                  <li>Page weight and network request measurement</li>
+                  <li>Performance audit (Core Web Vitals, load times)</li>
+                  <li>Identification of unnecessary resources (scripts, media, dependencies)</li>
+                  <li>Recommendations based on eco-design best practices</li>
+                  <li>Concrete actions to reduce CPU, bandwidth, and complexity</li>
+                </ul>
+                <p class="service-links">
+                  <a href="https://www.sustainablewebdesign.org/" rel="external noopener">Sustainable Web Design Guidelines</a>
+                </p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients Section (moved before Process) -->
+    <section id="clients" class="section section--blue">
+      <div class="container">
+        <h2>
+          <span data-lang="fr">Pour qui</span>
+          <span data-lang="en" hidden>Who it's for</span>
+        </h2>
+        <ul class="clients-list">
+          <li>
+            <span data-lang="fr">PME, ETI et grands groupes</span>
+            <span data-lang="en" hidden>SMEs and large organizations</span>
           </li>
-          <li class="service-card">
-            <h3>
-              <span data-lang="fr">Audit d'utilisabilité cognitive</span>
-              <span data-lang="en" hidden>Cognitive usability audits</span>
-            </h3>
-            <p>
-              <span data-lang="fr">Charge cognitive, architecture de l'information, compréhension des parcours.</span>
-              <span data-lang="en" hidden>Cognitive load, information architecture, and journey comprehension.</span>
-            </p>
+          <li>
+            <span data-lang="fr">Équipes produit, digital, communication, IT, conformité</span>
+            <span data-lang="en" hidden>Product, digital, communication, IT, and compliance teams</span>
           </li>
-          <li class="service-card">
-            <h3>
-              <span data-lang="fr">Audit de sobriété numérique</span>
-              <span data-lang="en" hidden>Digital sobriety audits</span>
-            </h3>
-            <p>
-              <span data-lang="fr">Poids des pages, performance, bonnes pratiques d'éco-conception (RGESN).</span>
-              <span data-lang="en" hidden>Page weight, performance, and eco-design best practices.</span>
-            </p>
+          <li>
+            <span data-lang="fr">Sites web, plateformes, outils internes existants</span>
+            <span data-lang="en" hidden>Existing websites, platforms, and internal tools</span>
+          </li>
+          <li>
+            <span data-lang="fr">Mise en conformité, refonte, dette UX/perf, accessibilité</span>
+            <span data-lang="en" hidden>Compliance, redesign, UX/perf debt, accessibility</span>
           </li>
         </ul>
       </div>
     </section>
 
     <!-- Process Section -->
-    <section id="process" class="section">
+    <section id="process" class="section section--white">
       <div class="container">
         <h2>
           <span data-lang="fr">Méthode</span>
-          <span data-lang="en" hidden>How I work</span>
+          <span data-lang="en" hidden>Process</span>
         </h2>
         <ol class="process-list">
           <li>
@@ -208,36 +332,8 @@
       </div>
     </section>
 
-    <!-- Clients Section -->
-    <section id="clients" class="section section-alt">
-      <div class="container">
-        <h2>
-          <span data-lang="fr">Pour qui</span>
-          <span data-lang="en" hidden>Who it's for</span>
-        </h2>
-        <ul class="clients-list">
-          <li>
-            <span data-lang="fr">PME, ETI et grands groupes</span>
-            <span data-lang="en" hidden>SMEs and large organizations</span>
-          </li>
-          <li>
-            <span data-lang="fr">Équipes produit, digital, communication, IT, conformité</span>
-            <span data-lang="en" hidden>Product, digital, communication, IT, and compliance teams</span>
-          </li>
-          <li>
-            <span data-lang="fr">Sites web, plateformes, outils internes existants</span>
-            <span data-lang="en" hidden>Existing websites, platforms, and internal tools</span>
-          </li>
-          <li>
-            <span data-lang="fr">Mise en conformité, refonte, dette UX/perf, accessibilité</span>
-            <span data-lang="en" hidden>Compliance, redesign, UX/perf debt, accessibility</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section id="contact" class="section section--blue">
       <div class="container">
         <h2>
           <span data-lang="fr">Contact</span>
@@ -250,9 +346,6 @@
         <address class="contact-details">
           <p class="contact-email">
             <a href="mailto:tdrelangue@gmail.com">tdrelangue@gmail.com</a>
-          </p>
-          <p class="contact-address">
-            47 chemin du Peyroux, 19360 Malemort
           </p>
         </address>
 
@@ -317,7 +410,7 @@
     </section>
 
     <!-- Privacy Section -->
-    <section id="privacy" class="section section-compact section-alt">
+    <section id="privacy" class="section section-compact section--neutral">
       <div class="container">
         <h2>
           <span data-lang="fr">Confidentialité</span>
@@ -338,7 +431,7 @@
         <span data-lang="en" hidden>Orig — Independent accessibility and digital sobriety consultant</span>
       </p>
       <p class="footer-contact">
-        47 chemin du Peyroux, 19360 Malemort · <a href="mailto:tdrelangue@gmail.com">tdrelangue@gmail.com</a>
+        <a href="mailto:tdrelangue@gmail.com">tdrelangue@gmail.com</a>
       </p>
       <p class="footer-note">
         <span data-lang="fr">Site conçu WCAG 2.2 AA, impact environnemental minimal.</span>
