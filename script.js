@@ -356,6 +356,173 @@
   }
 
   // =========================
+  // Variable Scroll Assist (Experimental)
+  // =========================
+
+  /**
+   * Optional "variable scroll speed" effect for desktop wheel/trackpad.
+   * - Enabled via ?scrollfx=1 query param or localStorage
+   * - Disabled on touch devices and when prefers-reduced-motion is set
+   * - Creates subtle resistance over reading blocks, faster scrolling in gaps
+   * - To remove: delete this entire section and the init call
+   */
+  var scrollAssist = {
+    enabled: false,
+    zones: [],
+    viewportCenter: 0,
+    SLOW_MULTIPLIER: 0.3,   // Much slower in reading zones
+    FAST_MULTIPLIER: 1.2,   // Slightly faster in gaps
+    STORAGE_KEY: 'orig_scrollfx'
+  };
+
+  function shouldEnableScrollAssist() {
+    // Check reduced motion preference
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return false;
+    }
+
+    // Check touch device (coarse pointer = touch)
+    if (window.matchMedia('(pointer: coarse)').matches) {
+      return false;
+    }
+
+    // Check localStorage override first
+    try {
+      var stored = localStorage.getItem(scrollAssist.STORAGE_KEY);
+      if (stored === 'off') return false;
+      if (stored === 'on') return true;
+    } catch (e) {
+      // localStorage not available
+    }
+
+    // Check URL param
+    try {
+      var urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('scrollfx') === '1') {
+        return true;
+      }
+    } catch (e) {
+      // URLSearchParams not available
+    }
+
+    return false;
+  }
+
+  function computeScrollZones() {
+    scrollAssist.zones = [];
+    var elements = document.querySelectorAll('.scroll-zone--read');
+    var scrollY = window.scrollY || window.pageYOffset;
+
+    for (var i = 0; i < elements.length; i++) {
+      var rect = elements[i].getBoundingClientRect();
+      scrollAssist.zones.push({
+        top: rect.top + scrollY,
+        bottom: rect.bottom + scrollY
+      });
+    }
+
+    // Sort by top position
+    scrollAssist.zones.sort(function(a, b) {
+      return a.top - b.top;
+    });
+  }
+
+  function isInReadingZone(y) {
+    var zones = scrollAssist.zones;
+    for (var i = 0; i < zones.length; i++) {
+      if (y >= zones[i].top && y <= zones[i].bottom) {
+        return true;
+      }
+      // Early exit if we've passed all possible zones
+      if (zones[i].top > y) {
+        break;
+      }
+    }
+    return false;
+  }
+
+  function handleWheelScroll(e) {
+    // Safety: don't interfere with zoom (Ctrl+wheel)
+    if (e.ctrlKey || e.metaKey) {
+      return;
+    }
+
+    // Safety: don't interfere when focused on form inputs
+    var activeEl = document.activeElement;
+    if (activeEl && (activeEl.tagName === 'TEXTAREA' ||
+        (activeEl.tagName === 'INPUT' && activeEl.type !== 'submit' && activeEl.type !== 'button'))) {
+      return;
+    }
+
+    // Get current viewport center position in document coordinates
+    var scrollY = window.scrollY || window.pageYOffset;
+    var viewportHeight = window.innerHeight;
+    var viewportCenter = scrollY + (viewportHeight / 2);
+
+    // Determine multiplier based on whether we're in a reading zone
+    var multiplier = isInReadingZone(viewportCenter)
+      ? scrollAssist.SLOW_MULTIPLIER
+      : scrollAssist.FAST_MULTIPLIER;
+
+    // Calculate adjusted delta
+    var deltaY = e.deltaY;
+
+    // Normalize deltaY for different deltaMode values
+    // 0 = pixels, 1 = lines, 2 = pages
+    if (e.deltaMode === 1) {
+      deltaY *= 20; // Approximate line height
+    } else if (e.deltaMode === 2) {
+      deltaY *= viewportHeight;
+    }
+
+    var adjustedDelta = deltaY * multiplier;
+
+    // Prevent default and apply our adjusted scroll
+    e.preventDefault();
+
+    window.scrollBy({
+      top: adjustedDelta,
+      left: 0,
+      behavior: 'auto'
+    });
+  }
+
+  function initVariableScrollAssist() {
+    if (!shouldEnableScrollAssist()) {
+      console.log('[ScrollFX] Disabled. Enable with ?scrollfx=1');
+      return;
+    }
+
+    scrollAssist.enabled = true;
+    console.log('[ScrollFX] Enabled - variable scroll speed active');
+
+    // Mark document for potential CSS hooks
+    document.documentElement.setAttribute('data-scrollfx', 'on');
+
+    // Compute zones initially
+    computeScrollZones();
+
+    // Recompute on resize (throttled)
+    var resizeTimeout = null;
+    window.addEventListener('resize', function() {
+      if (resizeTimeout) {
+        clearTimeout(resizeTimeout);
+      }
+      resizeTimeout = setTimeout(computeScrollZones, 200);
+    });
+
+    // Recompute when details elements toggle (zones may shift)
+    document.addEventListener('toggle', function(e) {
+      if (e.target.tagName === 'DETAILS') {
+        setTimeout(computeScrollZones, 50);
+      }
+    }, true);
+
+    // Attach wheel handler with passive: false to allow preventDefault
+    window.addEventListener('wheel', handleWheelScroll, { passive: false });
+  }
+
+  // =========================
   // Initialize
   // =========================
 
@@ -366,6 +533,7 @@
     setupSmoothScroll();
     setupMobileMenu();
     setupScrollEffects();
+    initVariableScrollAssist();
   }
 
   // Run on DOM ready
