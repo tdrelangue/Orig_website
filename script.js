@@ -48,10 +48,12 @@
     document.documentElement.lang = lang;
     document.documentElement.setAttribute('data-lang', lang);
 
-    // Update page title
-    document.title = lang === 'en'
-      ? 'Orig - Accessibility, Usability & Digital Sobriety Audits'
-      : 'Orig - Audits accessibilité, utilisabilité et sobriété numérique';
+    // Update page title - reads per-page data attributes if present
+    var titleFr = document.documentElement.getAttribute('data-title-fr')
+      || 'Orig | Logiciels sur mesure, IA appliquée et ergonomie numérique';
+    var titleEn = document.documentElement.getAttribute('data-title-en')
+      || 'Orig | Custom software, applied AI and digital ergonomics';
+    document.title = lang === 'en' ? titleEn : titleFr;
 
     // Toggle visibility of all language content
     var allLangElements = document.querySelectorAll('[data-lang]');

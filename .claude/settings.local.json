@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:whutmovie.vercel.app)",
+      "Bash(grep -n \"content: ''—''\" \"c:/Users/tdrelangue/OneDrive/programmes/OrigAI/Orig_website/styles.css\")",
+      "Bash(python3 -c \":*)",
+      "Bash(grep -rn $u2014 c:/Users/tdrelangue/OneDrive/programmes/OrigAI/Orig_website --include=*.html --include=*.js --include=*.css)"
+    ]
+  }
+}
