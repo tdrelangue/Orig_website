@@ -7,7 +7,20 @@
       "Bash(grep -rn $u2014 c:/Users/tdrelangue/OneDrive/programmes/OrigAI/Orig_website --include=*.html --include=*.js --include=*.css)",
       "WebFetch(domain:adnormandie.fr)",
       "WebFetch(domain:inclusiveleadership.solutions)",
-      "WebFetch(domain:www.capgemini.com)"
+      "WebFetch(domain:www.capgemini.com)",
+      "Bash(curl -s \"https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap\")",
+      "Bash(mkdir -p fonts)",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" \"https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap\")",
+      "Bash(curl -s -o \"syne-latin.woff2\" \"https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2BL9A.woff2\")",
+      "Bash(curl -s -o \"syne-latin-ext.woff2\" \"https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm25L9Hz_.woff2\")",
+      "Bash(ls \"/c/Users/tdrelangue/OneDrive/programmes/OrigAI/tut''''aide/web/src/app/\\(app\\)/[module]/dossiers/tabs/\")",
+      "Bash(cat \"/c/Users/tdrelangue/OneDrive/programmes/OrigAI/tut''''aide/web/src/app/\\(app\\)/[module]/dossiers/tabs/documents-tab.tsx\")",
+      "Bash(head -60 \"/c/Users/tdrelangue/OneDrive/programmes/OrigAI/tut''aide/web/src/app/\\(app\\)/[module]/dossiers/dossiers-client.tsx\")",
+      "Bash(npx tsc:*)",
+      "Bash(npx --prefix \"C:/Users/tdrelangue/OneDrive/programmes/OrigAI/tut''''aide/web\" tsc --noEmit --skipLibCheck)",
+      "Bash(bash -c \"cd \"\"/c/Users/tdrelangue/OneDrive/programmes/OrigAI/tut''aide/web\"\" && npx tsc --noEmit --skipLibCheck 2>&1 | head -20\")",
+      "Bash(bash -c \"cd \"\"/c/Users/tdrelangue/OneDrive/programmes/OrigAI/tut''aide/web\"\" && npm run build 2>&1\")"
     ]
   }
 }
