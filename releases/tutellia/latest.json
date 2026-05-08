@@ -1,7 +1,7 @@
 {
     "version":  "2.0.2",
-    "notes":  "Tutellia v2.0.2",
-    "pub_date":  "2026-05-08T09:18:02Z",
+    "notes":  "Fix auto-update ACL permissions",
+    "pub_date":  "2026-05-08T09:31:44Z",
     "platforms":  {
                       "windows-x86_64":  {
                                              "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTYXZEMEpPS2k1YmJmTjh1Rm51dXl3SE4ycDJnVmZIN1dSSGNJMWNRTnduRStGNW5TenVRejJ6ZjhhZndVc1FPdWxNYlJTSjN3cTYvM1owNi9pY3pTSFhTaDkzWTliMWdzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc4MjMxODgyCWZpbGU6VHV0ZWxsaWFfMi4wLjJfeDY0LXNldHVwLmV4ZQpsY0VJcVFMVDkxckxRY2ZsZTZLbTVRdFQ2REp6bXdwSFlzeFBhSlpMUXltaDlnc3kwbEM1VVppdHB3UDZMY0ZLUjdLS3J0RUUycmZyb2VmbmRxeGdCdz09Cg==",
