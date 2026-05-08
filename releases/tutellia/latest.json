@@ -1,11 +1,11 @@
 {
-  "version": "2.0.1",
-  "notes": "Correctif : chargement de l'application après installation. Tableau de bord : affichage dynamique des modules configurés. Panneau admin : indicateur de version.",
-  "pub_date": "2026-05-07T00:00:00Z",
-  "platforms": {
-    "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTYXZEMEpPS2k1YllTMnp5OTRHWk52N3JXWWtEQXEzV25UZUREa29na01LZENpNnU5VERZGR1FSZXl5RTk0MDd4NkpFTmNsTlhFZVlueERuMnB0bDFrMTY4S1BqZU1FblFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc4MTcwMDU5CWZpbGU6VHV0ZWxsaWFfMi4wLjFfeDY0LXNldHVwLmV4ZQpVdXdRVjZybkgydkRkcUU5SFMxWFMyV0RJSmxxdW1BOWlGRWFXZk9ubXN2cEQ5V0lFUk0zczREblp5M0ZhbzNGdjh4WWFJTzhwODJaaTJHNGpaekRCZz09Cg==",
-      "url": "https://orig-audit.netlify.app/releases/tutellia/Tutellia_2.0.1_x64-setup.exe"
-    }
-  }
+    "version":  "2.0.1",
+    "notes":  "Tutellia v2.0.1",
+    "pub_date":  "2026-05-08T08:36:16Z",
+    "platforms":  {
+                      "windows-x86_64":  {
+                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTYXZEMEpPS2k1YllTMnp5OTRHWk52N3JXWWtEQXEzV25UZUREa29na01LZENpNnU5VEZGR1FSZXl5RTk0MDd4NkpFTmNsTlhFZVlueERuMnB0bDFrMTY4S1BqZU1FblFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc4MTcwMDU5CWZpbGU6VHV0ZWxsaWFfMi4wLjFfeDY0LXNldHVwLmV4ZQpVdXdRVjZybkgydkRkcUU5SFMxWFMyV0RJSmxxdW1BOWlGRWFXZk9ubXN2cEQ5V0lFUk0zczREblp5M0ZhbzNGdjh4WWFJTzhwODJaaTJHNGpaekRCZz09Cg==",
+                                             "url":  "https://orig-audit.netlify.app/releases/tutellia/Tutellia_2.0.1_x64-setup.exe"
+                                         }
+                  }
 }
