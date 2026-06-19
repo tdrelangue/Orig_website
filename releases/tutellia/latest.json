@@ -1,6 +1,6 @@
 {
     "version":  "2.0.3",
-    "notes":  "Fix: reconnaissance de la civilité \"Mademoiselle\" lors de l'import ASH",
+    "notes":  "Kill server before update install",
     "pub_date":  "2026-06-19T00:00:00Z",
     "platforms":  {
                       "windows-x86_64":  {
