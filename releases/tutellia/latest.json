@@ -1,11 +1,11 @@
 {
-    "version":  "2.0.2",
-    "notes":  "Kill server before update install",
-    "pub_date":  "2026-05-08T11:54:36Z",
+    "version":  "2.0.3",
+    "notes":  "Fix: reconnaissance de la civilité \"Mademoiselle\" lors de l'import ASH",
+    "pub_date":  "2026-06-19T00:00:00Z",
     "platforms":  {
                       "windows-x86_64":  {
-                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTYXZEMEpPS2k1YmJmTjh1Rm51dXl3SE4ycDJnVmZIN1dSSGNJMWNRTnduRStGNW5TenVRejJ6ZjhhZndVc1FPdWxNYlJTSjN3cTYvM1owNi9pY3pTSFhTaDkzWTliMWdzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc4MjMxODgyCWZpbGU6VHV0ZWxsaWFfMi4wLjJfeDY0LXNldHVwLmV4ZQpsY0VJcVFMVDkxckxRY2ZsZTZLbTVRdFQ2REp6bXdwSFlzeFBhSlpMUXltaDlnc3kwbEM1VVppdHB3UDZMY0ZLUjdLS3J0RUUycmZyb2VmbmRxeGdCdz09Cg==",
-                                             "url":  "https://orig-audit.netlify.app/releases/tutellia/Tutellia_2.0.2_x64-setup.exe"
+                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTYXZEMEpPS2k1YlNUWER6TjFTVHh4SjRsZGdhcGZjcDdrNmxMYUxWSThkQmhIVENCTE1LQXE3OFppSGJHQVRKM1BoR2xGMGFGbUQ4MW1aMCsvdWxMUDkxVkdkeTFmM3dVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc4MjMzNzcxCWZpbGU6VHV0ZWxsaWFfMi4wLjNfeDY0LXNldHVwLmV4ZQpoSHA1ak9BZGt3NnZidlZETVNYNVUxanBPZFR0OUNpNnVVOE5IbmE5S0tGOUQyYkU4TE9jK0dWaFViQlRXNVZUdytsSDRCbjRaVDNBeU94MFdkRWJCQT09Cg==",
+                                             "url":  "https://orig-audit.netlify.app/releases/tutellia/Tutellia_2.0.3_x64-setup.exe"
                                          }
                   }
 }
