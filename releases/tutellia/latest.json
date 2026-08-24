@@ -1,11 +1,11 @@
 {
-    "version":  "2.0.3",
-    "notes":  "Kill server before update install",
-    "pub_date":  "2026-06-19T00:00:00Z",
+    "version":  "2.0.4",
+    "notes":  "Choix du trimestre/annee avec confirmation avant envoi (rapports en retard) ; bouton admin pour forcer le retelechargement de la mise a jour",
+    "pub_date":  "2026-08-24T21:15:28Z",
     "platforms":  {
                       "windows-x86_64":  {
-                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTYXZEMEpPS2k1YlNUWER6TjFTVHh4SjRsZGdhcGZjcDdrNmxMYUxWSThkQmhIVENCTE1LQXE3OFppSGJHQVRKM1BoR2xGMGFGbUQ4MW1aMCsvdWxMUDkxVkdkeTFmM3dVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc4MjMzNzcxCWZpbGU6VHV0ZWxsaWFfMi4wLjNfeDY0LXNldHVwLmV4ZQpoSHA1ak9BZGt3NnZidlZETVNYNVUxanBPZFR0OUNpNnVVOE5IbmE5S0tGOUQyYkU4TE9jK0dWaFViQlRXNVZUdytsSDRCbjRaVDNBeU94MFdkRWJCQT09Cg==",
-                                             "url":  "https://orig-audit.netlify.app/releases/tutellia/Tutellia_2.0.3_x64-setup.exe"
+                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTYXZEMEpPS2k1YlRrYWpZRndxUjk2V1VNRjBOQ1E1M1YrN0RuR1ZxVjNPcFQ4OURscTlRRE8wUlVlbW9ueXc0L3FmcGE5OFZLa050YW9BVHJ2NFBsdDRhc2tQMDRBZ0EwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NjA2MDkwCWZpbGU6VHV0ZWxsaWFfMi4wLjRfeDY0LXNldHVwLmV4ZQp5OVdIOGdoRklkaVp0MDZSdzhpTFgyWmFtN3Z5UG5DUm5zV2JVdHNpekZCempMSENCL0VoNDJPcTR6VnlvQ053d3phajhkVkdMUmthUDNHTHdrTW9EQT09Cg==",
+                                             "url":  "https://orig-audit.netlify.app/releases/tutellia/Tutellia_2.0.4_x64-setup.exe"
                                          }
                   }
 }
