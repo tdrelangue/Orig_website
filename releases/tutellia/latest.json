@@ -1,11 +1,11 @@
 {
-    "version":  "2.0.4",
-    "notes":  "Choix du trimestre/annee avec confirmation avant envoi (rapports en retard) ; bouton admin pour forcer le retelechargement de la mise a jour",
-    "pub_date":  "2026-08-24T21:15:28Z",
+    "version":  "2.0.5",
+    "notes":  "Recuperation de mot de passe oublie (code par email) ; configuration SMTP dediee dans l'administration",
+    "pub_date":  "2026-09-07T10:15:07Z",
     "platforms":  {
                       "windows-x86_64":  {
-                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTYXZEMEpPS2k1YlRrYWpZRndxUjk2V1VNRjBOQ1E1M1YrN0RuR1ZxVjNPcFQ4OURscTlRRE8wUlVlbW9ueXc0L3FmcGE5OFZLa050YW9BVHJ2NFBsdDRhc2tQMDRBZ0EwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NjA2MDkwCWZpbGU6VHV0ZWxsaWFfMi4wLjRfeDY0LXNldHVwLmV4ZQp5OVdIOGdoRklkaVp0MDZSdzhpTFgyWmFtN3Z5UG5DUm5zV2JVdHNpekZCempMSENCL0VoNDJPcTR6VnlvQ053d3phajhkVkdMUmthUDNHTHdrTW9EQT09Cg==",
-                                             "url":  "https://orig-audit.netlify.app/releases/tutellia/Tutellia_2.0.4_x64-setup.exe"
+                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTYXZEMEpPS2k1YmR6SDZvdU5mcDF2QXh0Mnk0NVdnd3J0QjJlVUU1QU1lbkRoT0RTK243SWVsRnM3SEo4bXA0czZjLzR0VS94eXBoRm5BRFZsSFBpNGVVdk1LeElDc0FrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4NTQyNDg5CWZpbGU6VHV0ZWxsaWFfMi4wLjVfeDY0LXNldHVwLmV4ZQpxR3dWTjVVUVBMV2FHN2U3Rm1CbHRVY0t6Yi9QYjUxaHo0UnFoTzdORDZzYXp5RzhiQmlxUVdNelR3blhWVmNSTU4xeUVMRGpGcTdVZEZIOC95SCtCUT09Cg==",
+                                             "url":  "https://orig-audit.netlify.app/releases/tutellia/Tutellia_2.0.5_x64-setup.exe"
                                          }
                   }
 }
