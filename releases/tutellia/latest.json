@@ -1,11 +1,11 @@
 {
-    "version":  "2.0.5",
-    "notes":  "Recuperation de mot de passe oublie (code par email) ; configuration SMTP dediee dans l'administration ; email groupe aux utilisateurs actifs depuis l'administration",
-    "pub_date":  "2026-09-07T13:06:02Z",
+    "version":  "2.0.6",
+    "notes":  "Le tri et le filtre des dossiers sont maintenant memorises automatiquement, et le tri alphabetique se base sur le nom de famille (reglable dans les Parametres).",
+    "pub_date":  "2026-09-07T16:50:11Z",
     "platforms":  {
                       "windows-x86_64":  {
-                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTYXZEMEpPS2k1YmFzYVRBZWlaM1JMWGhBM1NQcmFOb1BIdDlMWUtIU25wVU9ZSzd1cklZY1I1b2FHVk9lZmFxdkVkRklZZGtiMDJKZDhDT3hDTmNqNGxlQWRTWWtZZUEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4Nzg2MDc1CWZpbGU6VHV0ZWxsaWFfMi4wLjVfeDY0LXNldHVwLmV4ZQpFczlodElWTEtuZVZKcTJIQzVFSG0vNCtRNXJyMm8zM01ud3FnMDVCZDI5NTVjb25kTU1LTVpIY3hjNFdFMk1OeGhrais2Yzk2cjNubHN6d0EwYm9Bdz09Cg==",
-                                             "url":  "https://orig-audit.netlify.app/releases/tutellia/Tutellia_2.0.5_x64-setup.exe"
+                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTYXZEMEpPS2k1YmRtWERjUGxCc1crOFh3L3l4bUl5a0wraDc0SHcvUDVLWDc4ZmVXVW1JLzZKM21CZkt1c3FRaUZkck1PY3FJc0NiUk8rd2pOVGtidFBJL1haNUFiQkFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4Nzk4NTgyCWZpbGU6VHV0ZWxsaWFfMi4wLjZfeDY0LXNldHVwLmV4ZQprVEwvTCs0dFVWanAxdHA0Y0RTclY4UHJ2UXlQL2JJa3hOK0pqZ2RIdHA5YVRtUDhXYzZONERjR2NWQml4R0JvOXhPWEV0aGRQYXgzN1A0TnpVNzdCZz09Cg==",
+                                             "url":  "https://orig-audit.netlify.app/releases/tutellia/Tutellia_2.0.6_x64-setup.exe"
                                          }
                   }
 }
