@@ -1,10 +1,10 @@
 {
     "version":  "2.0.5",
-    "notes":  "Recuperation de mot de passe oublie (code par email) ; configuration SMTP dediee dans l'administration",
-    "pub_date":  "2026-09-07T10:15:07Z",
+    "notes":  "Recuperation de mot de passe oublie (code par email) ; configuration SMTP dediee dans l'administration ; email groupe aux utilisateurs actifs depuis l'administration",
+    "pub_date":  "2026-09-07T13:06:02Z",
     "platforms":  {
                       "windows-x86_64":  {
-                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTYXZEMEpPS2k1YmR6SDZvdU5mcDF2QXh0Mnk0NVdnd3J0QjJlVUU1QU1lbkRoT0RTK243SWVsRnM3SEo4bXA0czZjLzR0VS94eXBoRm5BRFZsSFBpNGVVdk1LeElDc0FrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4NTQyNDg5CWZpbGU6VHV0ZWxsaWFfMi4wLjVfeDY0LXNldHVwLmV4ZQpxR3dWTjVVUVBMV2FHN2U3Rm1CbHRVY0t6Yi9QYjUxaHo0UnFoTzdORDZzYXp5RzhiQmlxUVdNelR3blhWVmNSTU4xeUVMRGpGcTdVZEZIOC95SCtCUT09Cg==",
+                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTYXZEMEpPS2k1YmFzYVRBZWlaM1JMWGhBM1NQcmFOb1BIdDlMWUtIU25wVU9ZSzd1cklZY1I1b2FHVk9lZmFxdkVkRklZZGtiMDJKZDhDT3hDTmNqNGxlQWRTWWtZZUEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4Nzg2MDc1CWZpbGU6VHV0ZWxsaWFfMi4wLjVfeDY0LXNldHVwLmV4ZQpFczlodElWTEtuZVZKcTJIQzVFSG0vNCtRNXJyMm8zM01ud3FnMDVCZDI5NTVjb25kTU1LTVpIY3hjNFdFMk1OeGhrais2Yzk2cjNubHN6d0EwYm9Bdz09Cg==",
                                              "url":  "https://orig-audit.netlify.app/releases/tutellia/Tutellia_2.0.5_x64-setup.exe"
                                          }
                   }
