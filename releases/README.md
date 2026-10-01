@@ -1,15 +1,40 @@
 # Releases
 
 This folder hosts update manifests and installers for Orig software products.
+It is not linked from any page of the site: apps read it directly.
 
 ## Structure
 
 ```
 releases/
-└── tutellia/
+├── tutellia/
+│   ├── latest.json              ← Tauri auto-updater manifest
+│   └── Tutellia_x.x.x_x64-setup.exe(.sig)
+└── origpdf/
     ├── latest.json              ← Tauri auto-updater manifest
-    └── Tutellia-x.x.x-setup.exe  ← Windows installer (upload manually after each build)
+    └── (OrigPDF_x.x.x_x64-setup.exe(.sig), once the first release ships)
 ```
+
+## OrigPDF
+
+OrigPDF installs check `https://orig-audit.netlify.app/releases/origpdf/latest.json`
+at startup and from Settings.
+
+**Current state (2026-10-01): trial version, nothing published.** `latest.json`
+announces version `0.1.0` (the version being tested) with no platform, so no
+installed copy is ever offered an update. There is no installer here and no
+page of the site mentions OrigPDF.
+
+To publish a release, from `OrigPDF/apps/desktop`:
+
+```powershell
+./release.ps1 -Version X.Y.Z -Notes "..."          # build, sign, copy here, write latest.json
+./release.ps1 -Version X.Y.Z -Notes "..." -Push    # same, then push the site (Netlify deploys)
+```
+
+Do not hand-edit `latest.json` for a real release: the script takes the
+signature from the signed installer. OrigPDF has its own signing key
+(`%USERPROFILE%\.tauri\origpdf.key`); never sign it with Tutellia's.
 
 ## How to publish a new Tutellia release
 
@@ -21,8 +46,8 @@ npm run tauri:build
 ```
 
 This produces two files in `src-tauri/target/release/bundle/nsis/`:
-- `Tutellia_x.x.x_x64-setup.exe` — the installer
-- `Tutellia_x.x.x_x64-setup.exe.sig` — the signature (content needed for latest.json)
+- `Tutellia_x.x.x_x64-setup.exe`: the installer
+- `Tutellia_x.x.x_x64-setup.exe.sig`: the signature (content needed for latest.json)
 
 ### 2. Upload the installer
 
@@ -34,13 +59,13 @@ releases/tutellia/Tutellia-x.x.x-setup.exe
 ### 3. Update latest.json
 
 Edit `releases/tutellia/latest.json`:
-- `version` → new version number (e.g. `"2.1.0"`)
-- `pub_date` → today's date in ISO format (e.g. `"2026-05-06T00:00:00Z"`)
-- `url` → full URL to the new installer on this site
-- `signature` → paste the entire content of the `.sig` file
+- `version`: new version number (e.g. `"2.1.0"`)
+- `pub_date`: today's date in ISO format (e.g. `"2026-05-06T00:00:00Z"`)
+- `url`: full URL to the new installer on this site
+- `signature`: paste the entire content of the `.sig` file
 
 ### 4. Deploy
 
-Push to git — Netlify deploys automatically.
+Push to git. Netlify deploys automatically.
 
 All Tutellia installations will check `latest.json` on next launch and prompt the user to update if the version is newer than what they have installed.

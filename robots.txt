@@ -2,6 +2,8 @@
 
 User-agent: *
 Allow: /
+# Update channel read by the OrigPDF app, not a page for visitors.
+Disallow: /releases/origpdf/
 
 # Sitemap location (update with actual domain after deployment)
 Sitemap: https://www.example.com/sitemap.xml
