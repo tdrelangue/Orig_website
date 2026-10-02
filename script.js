@@ -1,5 +1,5 @@
 /**
- * Orig - Language Toggle & Form Validation
+ * OrigAI - Language Toggle & Form Validation
  * Lightweight, accessible, eco-responsible
  * Target: < 3KB minified
  */
@@ -50,9 +50,9 @@
 
     // Update page title - reads per-page data attributes if present
     var titleFr = document.documentElement.getAttribute('data-title-fr')
-      || 'Orig | Logiciels sur mesure, IA appliquée et ergonomie numérique';
+      || 'OrigAI | Logiciels sur mesure, IA appliquée et ergonomie numérique';
     var titleEn = document.documentElement.getAttribute('data-title-en')
-      || 'Orig | Custom software, applied AI and digital ergonomics';
+      || 'OrigAI | Custom software, applied AI and digital ergonomics';
     document.title = lang === 'en' ? titleEn : titleFr;
 
     // Toggle visibility of all language content

@@ -1,4 +1,4 @@
-# robots.txt for Orig accessibility consulting site
+# robots.txt for OrigAI accessibility consulting site
 
 User-agent: *
 Allow: /
