@@ -20,10 +20,8 @@ releases/
 OrigPDF installs check `https://orig-audit.netlify.app/releases/origpdf/latest.json`
 at startup and from Settings.
 
-**Current state (2026-10-01): trial version, nothing published.** `latest.json`
-announces version `0.1.0` (the version being tested) with no platform, so no
-installed copy is ever offered an update. There is no installer here and no
-page of the site mentions OrigPDF.
+**Current state (2026-10-03): v0.1.0 published** (Windows, `OrigPDF_0.1.0_x64-setup.exe`),
+linked from produits.html. The app is named OrigPDF, without a space.
 
 To publish a release, from `OrigPDF/apps/desktop`:
 
