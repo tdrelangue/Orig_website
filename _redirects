@@ -1,0 +1,10 @@
+# Netlify redirects. The first matching rule wins, so exceptions come first.
+# Rules ending in "!" are forced: they apply even when a file exists at the path.
+
+# Update channel: always served as 200 on the old address, never redirected.
+# Tutellia installs up to v2.0.7 have this address hardcoded. Keep this rule at
+# least 12 months after the release that reads the update URL from the database.
+https://orig-audit.netlify.app/releases/*   /releases/:splat   200!
+
+# Everything else on the old address: permanent redirect to the new domain.
+https://orig-audit.netlify.app/*            https://www.origai.fr/:splat   301!

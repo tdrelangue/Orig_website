@@ -3,6 +3,18 @@
 This folder hosts update manifests and installers for Orig software products.
 It is not linked from any page of the site: apps read it directly.
 
+## Addresses
+
+The site answers on `https://www.origai.fr` (main) and on the old
+`https://orig-audit.netlify.app`. `_redirects` sends every old-address page to
+the new domain with a 301, **except `/releases/*`, which stays 200 on both**:
+Tutellia up to v2.0.7 has the old address hardcoded. Keep that exception at
+least 12 months after the release that reads the update URL from the database.
+
+From v2.0.7, Tutellia tries in order: the URL saved by the admin in
+Administration > Configuration système, then
+`https://www.origai.fr/releases/tutellia/latest.json`, then the old address.
+
 ## Structure
 
 ```
@@ -17,7 +29,7 @@ releases/
 
 ## OrigPDF
 
-OrigPDF installs check `https://orig-audit.netlify.app/releases/origpdf/latest.json`
+OrigPDF installs check `https://orig-audit.netlify.app/releases/origpdf/latest.json` (served on both domains)
 at startup and from Settings.
 
 **Current state (2026-10-03): v0.1.0 published** (Windows, `OrigPDF_0.1.0_x64-setup.exe`),

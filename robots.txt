@@ -2,8 +2,7 @@
 
 User-agent: *
 Allow: /
-# Update channel read by the OrigPDF app, not a page for visitors.
-Disallow: /releases/origpdf/
+# Update channels read by the apps (Tutellia, OrigPDF), not pages for visitors.
+Disallow: /releases/
 
-# Sitemap location (update with actual domain after deployment)
-Sitemap: https://www.example.com/sitemap.xml
+Sitemap: https://www.origai.fr/sitemap.xml
