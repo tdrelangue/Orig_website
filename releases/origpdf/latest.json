@@ -6,6 +6,14 @@
         "windows-x86_64": {
             "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTeE83Y1RpWGowYnk3cXozeVVWcStFbE5YOFVsWmFpQWdTK202VE9nUHVqb1RsbzFGR3V6VTJyQ0kvKyt0MVM0SFZaQk1sVDVhL2RZdEhaelN0WGhzRVc2RCtnVG1NcVE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwOTkwNTk2CWZpbGU6T3JpZ1BERl8wLjEuMF94NjQtc2V0dXAuZXhlCmNiNlZObmZWWURScnRONkNFL2RiMmtNTGg0Y1h2V3ZlRFFyOUZEMGV4SUwxRDZUOVducGxBSDJsbWQrTE8rM2F1TWg3TE8rT1BscTluTG1ab3VHdkRBPT0K",
             "url": "https://www.origai.fr/releases/origpdf/OrigPDF_0.1.0_x64-setup.exe"
+        },
+        "darwin-aarch64": {
+            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTeE83Y1RpWGowYjduQi8zakxoU1NheFJXTU01clM3MkVuQTlTbFpYbUpXMmdEaEpoUkYwakZuSWdGejUxdk5SM1ZqZzY5ajBvVWVpelQ2ZDd5SksyTkhiNFNWWmxIY3dJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxMTQwODI3CWZpbGU6T3JpZ1BERi5hcHAudGFyLmd6Clk2S1VCMGpBMmlEZnFxbGVzcWxEQ1l3T2RqZDZtQkhQM3g4UEt4N09JY0s2ODZkOHN4d296dW9ldEsxZE9oNEFrSzBuamJDVytKTlZsN1oyb0tUUkR3PT0K",
+            "url": "https://www.origai.fr/releases/origpdf/OrigPDF_0.1.0_universal.app.tar.gz"
+        },
+        "darwin-x86_64": {
+            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTeE83Y1RpWGowYjduQi8zakxoU1NheFJXTU01clM3MkVuQTlTbFpYbUpXMmdEaEpoUkYwakZuSWdGejUxdk5SM1ZqZzY5ajBvVWVpelQ2ZDd5SksyTkhiNFNWWmxIY3dJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxMTQwODI3CWZpbGU6T3JpZ1BERi5hcHAudGFyLmd6Clk2S1VCMGpBMmlEZnFxbGVzcWxEQ1l3T2RqZDZtQkhQM3g4UEt4N09JY0s2ODZkOHN4d296dW9ldEsxZE9oNEFrSzBuamJDVytKTlZsN1oyb0tUUkR3PT0K",
+            "url": "https://www.origai.fr/releases/origpdf/OrigPDF_0.1.0_universal.app.tar.gz"
         }
     }
 }
