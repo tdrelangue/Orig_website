@@ -1,6 +1,11 @@
 # Netlify redirects. The first matching rule wins, so exceptions come first.
 # Rules ending in "!" are forced: they apply even when a file exists at the path.
 
+# Tutellia macOS files exceed GitHub's 100 MB repo limit: hosted on GitHub Releases
+# (tdrelangue/tutaide), served under our own addresses. Keep these rules first.
+/releases/tutellia/Tutellia_2.0.7_universal.dmg          https://github.com/tdrelangue/tutaide/releases/download/v2.0.7/Tutellia_2.0.7_universal.dmg          302!
+/releases/tutellia/Tutellia_2.0.7_universal.app.tar.gz   https://github.com/tdrelangue/tutaide/releases/download/v2.0.7/Tutellia_2.0.7_universal.app.tar.gz   302!
+
 # Update channel: always served as 200 on the old address, never redirected.
 # Tutellia installs up to v2.0.7 have this address hardcoded. Keep this rule at
 # least 12 months after the release that reads the update URL from the database.

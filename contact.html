@@ -1,45 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr" data-lang="fr"
-  data-title-fr="OrigAI | Contact"
-  data-title-en="OrigAI | Contact">
+  data-title-fr="Contact – OrigAI"
+  data-title-en="Contact – OrigAI">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Réserver un échange, demander un audit ou prendre contact avec OrigAI pour un projet logiciel, IA ou ergonomie numérique.">
-  <meta name="theme-color" content="#0B63CE">
-  <title>OrigAI | Contact</title>
+  <meta name="theme-color" content="#071A36">
+  <title>Contact – OrigAI</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
 </head>
 <body>
-  <a class="skip-link" href="#main">
-    <span data-lang="fr">Aller au contenu</span>
-    <span data-lang="en" hidden>Skip to content</span>
-  </a>
+  <a class="skip-link" href="#main" data-en="Skip to content">Aller au contenu</a>
 
   <header>
     <div class="container header-container">
       <a href="index.html" class="header-brand" aria-label="OrigAI | Accueil">
-        <img src="assets/logo-removebg-preview.png" alt="" class="logo" width="48" height="48">
-        <span class="brand-name">OrigAI</span>
+        <img src="favicon.svg" alt="" class="logo" width="40" height="40">
+        <span class="brand-name">Orig<span>AI</span></span>
       </a>
 
-      <nav aria-label="Navigation principale" id="main-nav" class="desktop-nav">
+      <nav aria-label="Navigation principale" data-label-fr="Navigation principale" data-label-en="Main navigation" id="main-nav" class="desktop-nav">
         <ul class="nav-list">
-          <li><a href="index.html"><span data-lang="fr">Accueil</span><span data-lang="en" hidden>Home</span></a></li>
-          <li><a href="logiciel.html"><span data-lang="fr">Logiciel</span><span data-lang="en" hidden>Software</span></a></li>
-          <li><a href="ia-data.html"><span data-lang="fr">IA &amp; Données</span><span data-lang="en" hidden>AI &amp; Data</span></a></li>
-          <li><a href="ergonomie.html"><span data-lang="fr">Ergonomie</span><span data-lang="en" hidden>Ergonomics</span></a></li>
-          <li><a href="produits.html"><span data-lang="fr">Produits</span><span data-lang="en" hidden>Products</span></a></li>
-          <li><a href="contact.html" aria-current="page"><span data-lang="fr">Contact</span><span data-lang="en" hidden>Contact</span></a></li>
+          <li><a href="index.html" data-en="Home">Accueil</a></li>
+          <li><a href="logiciel.html" data-en="Software">Logiciel</a></li>
+          <li><a href="ia-data.html" data-en="AI &amp; Data">IA &amp; Données</a></li>
+          <li><a href="ergonomie.html" data-en="Ergonomics">Ergonomie</a></li>
+          <li><a href="produits.html" data-en="Products">Produits</a></li>
+          <li><a href="contact.html" aria-current="page" data-en="Contact">Contact</a></li>
         </ul>
       </nav>
 
       <fieldset class="lang-toggle desktop-lang lang-switch">
-        <legend class="visually-hidden">
-          <span data-lang="fr">Langue du site</span>
-          <span data-lang="en" hidden>Site language</span>
-        </legend>
+        <legend class="visually-hidden" data-en="Site language">Langue du site</legend>
         <div class="lang-options">
           <label class="lang-option" for="lang-fr-desktop">
             <input type="radio" name="language-desktop" id="lang-fr-desktop" value="fr" checked>
@@ -59,21 +54,18 @@
       </button>
 
       <div id="mobile-menu" class="mobile-menu" hidden>
-        <nav aria-label="Navigation principale mobile">
+        <nav aria-label="Navigation principale mobile" data-label-fr="Navigation principale mobile" data-label-en="Main navigation (mobile)">
           <ul class="mobile-nav-list">
-            <li><a href="index.html"><span data-lang="fr">Accueil</span><span data-lang="en" hidden>Home</span></a></li>
-            <li><a href="logiciel.html"><span data-lang="fr">Logiciel</span><span data-lang="en" hidden>Software</span></a></li>
-            <li><a href="ia-data.html"><span data-lang="fr">IA &amp; Données</span><span data-lang="en" hidden>AI &amp; Data</span></a></li>
-            <li><a href="ergonomie.html"><span data-lang="fr">Ergonomie</span><span data-lang="en" hidden>Ergonomics</span></a></li>
-            <li><a href="produits.html"><span data-lang="fr">Produits</span><span data-lang="en" hidden>Products</span></a></li>
-            <li><a href="contact.html" aria-current="page"><span data-lang="fr">Contact</span><span data-lang="en" hidden>Contact</span></a></li>
+            <li><a href="index.html" data-en="Home">Accueil</a></li>
+            <li><a href="logiciel.html" data-en="Software">Logiciel</a></li>
+            <li><a href="ia-data.html" data-en="AI &amp; Data">IA &amp; Données</a></li>
+            <li><a href="ergonomie.html" data-en="Ergonomics">Ergonomie</a></li>
+            <li><a href="produits.html" data-en="Products">Produits</a></li>
+            <li><a href="contact.html" aria-current="page" data-en="Contact">Contact</a></li>
           </ul>
         </nav>
         <fieldset class="mobile-lang-toggle lang-switch">
-          <legend>
-            <span data-lang="fr">Langue</span>
-            <span data-lang="en" hidden>Language</span>
-          </legend>
+          <legend data-en="Language">Langue</legend>
           <div class="lang-options">
             <label class="lang-option" for="lang-fr-mobile">
               <input type="radio" name="language-mobile" id="lang-fr-mobile" value="fr" checked>
@@ -94,79 +86,43 @@
     <!-- Hero -->
     <section class="hero hero--inner">
       <div class="container">
-        <h1>
-          <span data-lang="fr">Travaillons ensemble</span>
-          <span data-lang="en" hidden>Let's work together</span>
-        </h1>
-        <p class="hero-subtitle">
-          <span data-lang="fr">Un projet à cadrer, un audit à demander, une question à poser : choisissez la voie qui vous convient.</span>
-          <span data-lang="en" hidden>A project to scope, an audit to request, a question to ask : choose the path that suits you.</span>
-        </p>
+        <h1 data-en="Let's work together">Travaillons ensemble</h1>
+        <p class="hero-subtitle" data-en="A project to scope, an audit to request, a question to ask : choose the path that suits you.">Un projet à cadrer, un audit à demander, une question à poser : choisissez la voie qui vous convient.</p>
       </div>
     </section>
 
     <!-- Contact options -->
     <section class="section section--white">
       <div class="container">
-        <h2 class="visually-hidden">
-          <span data-lang="fr">Options de contact</span>
-          <span data-lang="en" hidden>Contact options</span>
-        </h2>
+        <h2 class="visually-hidden" data-en="Contact options">Options de contact</h2>
         <div class="contact-options">
 
           <!-- Option 1: Book a call -->
-          <div class="contact-option">
-            <div class="contact-option-icon" aria-hidden="true">📅</div>
-            <h3>
-              <span data-lang="fr">Réserver un échange</span>
-              <span data-lang="en" hidden>Book a call</span>
-            </h3>
-            <p>
-              <span data-lang="fr">Un premier appel de 30 minutes pour comprendre votre besoin et voir si une collaboration a du sens. Sans engagement.</span>
-              <span data-lang="en" hidden>A first 30-minute call to understand your need and see if working together makes sense. No commitment.</span>
-            </p>
+          <div class="contact-option fold">
+            <div class="contact-option-icon contact-option-icon--call" aria-hidden="true"></div>
+            <h3 data-en="Book a call">Réserver un échange</h3>
+            <p data-en="A first 30-minute call to understand your need and see if working together makes sense. No commitment.">Un premier appel de 30 minutes pour comprendre votre besoin et voir si une collaboration a du sens. Sans engagement.</p>
             <!-- Replace the href below with your actual Calendly or booking link -->
-            <a href="mailto:origai.consulting@protonmail.com?subject=Demande%20d%27échange" class="btn btn--primary">
-              <span data-lang="fr">Proposer un créneau</span>
-              <span data-lang="en" hidden>Suggest a time</span>
-            </a>
+            <a href="mailto:origai.consulting@protonmail.com?subject=Demande%20d%27échange" class="btn btn--primary" data-en="Suggest a time">Proposer un créneau</a>
           </div>
 
           <!-- Option 2: Request an audit -->
-          <div class="contact-option">
-            <div class="contact-option-icon" aria-hidden="true">🔍</div>
-            <h3>
-              <span data-lang="fr">Demander un audit</span>
-              <span data-lang="en" hidden>Request an audit</span>
-            </h3>
-            <p>
-              <span data-lang="fr">Accessibilité WCAG, ergonomie cognitive, performance ou analyse de données : décrivez ce que vous voulez faire évaluer.</span>
-              <span data-lang="en" hidden>WCAG accessibility, cognitive ergonomics, performance or data analysis: describe what you want evaluated.</span>
-            </p>
-            <a href="#contact-form" class="btn btn--outline">
-              <span data-lang="fr">Décrire mon besoin</span>
-              <span data-lang="en" hidden>Describe my need</span>
-            </a>
+          <div class="contact-option fold">
+            <div class="contact-option-icon contact-option-icon--audit" aria-hidden="true"></div>
+            <h3 data-en="Request an audit">Demander un audit</h3>
+            <p data-en="WCAG accessibility, cognitive ergonomics, performance or data analysis: describe what you want evaluated.">Accessibilité WCAG, ergonomie cognitive, performance ou analyse de données : décrivez ce que vous voulez faire évaluer.</p>
+            <a href="#contact-form" class="btn btn--outline" data-en="Describe my need">Décrire mon besoin</a>
           </div>
 
           <!-- Option 3: General contact -->
-          <div class="contact-option">
-            <div class="contact-option-icon" aria-hidden="true">✉️</div>
-            <h3>
-              <span data-lang="fr">Contact direct</span>
-              <span data-lang="en" hidden>Direct contact</span>
-            </h3>
-            <p>
-              <span data-lang="fr">Pour toute autre question, envoyez-moi un message directement.</span>
-              <span data-lang="en" hidden>For any other question, send me a message directly.</span>
-            </p>
+          <div class="contact-option fold">
+            <div class="contact-option-icon contact-option-icon--mail" aria-hidden="true"></div>
+            <h3 data-en="Direct contact">Contact direct</h3>
+            <p data-en="For any other question, send me a message directly.">Pour toute autre question, envoyez-moi un message directement.</p>
             <address>
               <a href="mailto:origai.consulting@protonmail.com" class="contact-email-link">origai.consulting@protonmail.com</a>
             </address>
-            <a href="#contact-form" class="btn btn--outline">
-              <span data-lang="fr">Envoyer un message</span>
-              <span data-lang="en" hidden>Send a message</span>
-            </a>
+            <a href="#contact-form" class="btn btn--outline" data-en="Send a message">Envoyer un message</a>
           </div>
 
         </div>
@@ -176,78 +132,53 @@
     <!-- Contact form -->
     <section id="contact-form-section" class="contact-form-section">
       <div class="container">
-        <h2>
-          <span data-lang="fr">Envoyer un message</span>
-          <span data-lang="en" hidden>Send a message</span>
-        </h2>
+        <h2 data-en="Send a message">Envoyer un message</h2>
 
-        <div class="form-container">
+        <div class="form-container fold">
           <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-labelledby="form-heading">
-            <h3 id="form-heading" class="visually-hidden">
-              <span data-lang="fr">Formulaire de contact</span>
-              <span data-lang="en" hidden>Contact form</span>
-            </h3>
+            <h3 id="form-heading" class="visually-hidden" data-en="Contact form">Formulaire de contact</h3>
 
             <p class="honeypot">
               <label>Do not fill: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
             </p>
 
             <div class="form-group">
-              <label for="name">
-                <span data-lang="fr">Nom</span>
-                <span data-lang="en" hidden>Name</span>
-              </label>
+              <label for="name" data-en="Name">Nom</label>
               <input type="text" id="name" name="name" required autocomplete="name">
             </div>
 
             <div class="form-group">
-              <label for="email">
-                <span data-lang="fr">Email</span>
-                <span data-lang="en" hidden>Email</span>
-              </label>
+              <label for="email" data-en="Email">Email</label>
               <input type="email" id="email" name="email" required autocomplete="email">
             </div>
 
             <div class="form-group">
               <label for="organization">
-                <span data-lang="fr">Organisation <span style="font-weight:400;color:var(--text-muted)">(facultatif)</span></span>
-                <span data-lang="en" hidden>Organization <span style="font-weight:400;color:var(--text-muted)">(optional)</span></span>
+                <span data-lang="fr">Organisation <span class="form-optional">(facultatif)</span></span>
+                <span data-lang="en" hidden>Organization <span class="form-optional">(optional)</span></span>
               </label>
               <input type="text" id="organization" name="organization" autocomplete="organization">
             </div>
 
             <div class="form-group">
-              <label for="subject">
-                <span data-lang="fr">Sujet</span>
-                <span data-lang="en" hidden>Subject</span>
-              </label>
-              <select id="subject" name="subject" style="width:100%;padding:0.75rem;font-size:1rem;font-family:inherit;border:2px solid var(--border);border-radius:var(--radius-md);background:var(--bg-light);color:var(--text);">
-                <option value="" data-lang="fr">Choisir...</option>
-                <option value="" data-lang="en" hidden>Select...</option>
-                <option value="logiciel" data-lang="fr">Développement logiciel sur mesure</option>
-                <option value="logiciel" data-lang="en" hidden>Custom software development</option>
-                <option value="ia" data-lang="fr">IA appliquée / Données</option>
-                <option value="ia" data-lang="en" hidden>Applied AI / Data</option>
-                <option value="ergonomie" data-lang="fr">Ergonomie / Audit UX</option>
-                <option value="ergonomie" data-lang="en" hidden>Ergonomics / UX audit</option>
-                <option value="autre" data-lang="fr">Autre</option>
-                <option value="autre" data-lang="en" hidden>Other</option>
+              <label for="subject" data-en="Subject">Sujet</label>
+              <select id="subject" name="subject">
+                <option value="" data-fr="Choisir…" data-en="Select…">Choisir…</option>
+                <option value="logiciel" data-fr="Développement logiciel sur mesure" data-en="Custom software development">Développement logiciel sur mesure</option>
+                <option value="ia" data-fr="IA appliquée / Données" data-en="Applied AI / Data">IA appliquée / Données</option>
+                <option value="ergonomie" data-fr="Ergonomie / Audit UX" data-en="Ergonomics / UX audit">Ergonomie / Audit UX</option>
+                <option value="produits" data-fr="Produits : Tutellia, OrigPDF" data-en="Products: Tutellia, OrigPDF">Produits : Tutellia, OrigPDF</option>
+                <option value="autre" data-fr="Autre" data-en="Other">Autre</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="message">
-                <span data-lang="fr">Message</span>
-                <span data-lang="en" hidden>Message</span>
-              </label>
+              <label for="message" data-en="Message">Message</label>
               <textarea id="message" name="message" rows="6" required></textarea>
             </div>
 
             <div class="form-actions">
-              <button type="submit">
-                <span data-lang="fr">Envoyer</span>
-                <span data-lang="en" hidden>Send</span>
-              </button>
+              <button type="submit" data-en="Send">Envoyer</button>
             </div>
 
             <p class="form-note">
@@ -263,24 +194,38 @@
 
   <footer>
     <div class="container">
-      <p class="footer-brand">
-        <span data-lang="fr">OrigAI | Développement logiciel, IA appliquée et ergonomie numérique</span>
-        <span data-lang="en" hidden>OrigAI | Software development, applied AI and digital ergonomics</span>
-      </p>
-      <nav class="footer-links" aria-label="Liens du pied de page">
-        <a href="logiciel.html"><span data-lang="fr">Logiciel</span><span data-lang="en" hidden>Software</span></a>
-        <a href="ia-data.html"><span data-lang="fr">IA &amp; Données</span><span data-lang="en" hidden>AI &amp; Data</span></a>
-        <a href="ergonomie.html"><span data-lang="fr">Ergonomie</span><span data-lang="en" hidden>Ergonomics</span></a>
-        <a href="contact.html"><span data-lang="fr">Contact</span><span data-lang="en" hidden>Contact</span></a>
-        <a href="confidentialite.html"><span data-lang="fr">Confidentialité</span><span data-lang="en" hidden>Privacy</span></a>
-      </nav>
-      <p class="footer-contact">
-        <a href="mailto:origai.consulting@protonmail.com">origai.consulting@protonmail.com</a>
-      </p>
-      <p class="footer-note">
-        <span data-lang="fr">Site conçu WCAG 2.2 AA, sans suivi analytique.</span>
-        <span data-lang="en" hidden>WCAG 2.2 AA design, no analytics tracking.</span>
-      </p>
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand"><img src="favicon.svg" alt="" width="32" height="32"><span class="footer-wordmark">Orig<span>AI</span></span></p>
+          <p class="footer-tagline" data-en="Custom software, applied AI and digital ergonomics for demanding professional environments.">Logiciels sur mesure, IA appliquée et ergonomie numérique pour les environnements professionnels exigeants.</p>
+          <p class="footer-contact"><a href="mailto:origai.consulting@protonmail.com">origai.consulting@protonmail.com</a></p>
+        </div>
+        <nav aria-label="Plan du site" data-label-fr="Plan du site" data-label-en="Sitemap">
+          <p class="footer-title" aria-hidden="true" data-en="Sitemap">Plan du site</p>
+          <ul class="footer-links">
+          <li><a href="index.html" data-en="Home">Accueil</a></li>
+          <li><a href="logiciel.html" data-en="Software">Logiciel</a></li>
+          <li><a href="ia-data.html" data-en="AI &amp; Data">IA &amp; Données</a></li>
+          <li><a href="ergonomie.html" data-en="Ergonomics">Ergonomie</a></li>
+          <li><a href="produits.html" data-en="Products">Produits</a></li>
+          <li><a href="contact.html" aria-current="page" data-en="Contact">Contact</a></li>
+          <li><a href="confidentialite.html" data-en="Privacy">Confidentialité</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="footer-title" data-en="Digital sobriety">Sobriété numérique</p>
+          <a class="eco-badge" href="https://www.ecoindex.fr/" rel="external noopener">
+            <span class="eco-grade" aria-hidden="true">A</span>
+            <span class="eco-score">EcoIndex A · 83–89/100</span>
+            <span class="eco-detail" data-en="Measured 4 October 2026, ecoindex.fr method">Mesuré le 4 octobre 2026, méthode ecoindex.fr</span>
+          </a>
+          <ul class="footer-claims">
+            <li data-en="WCAG 2.2 AA, aiming for AAA">WCAG 2.2 AA, cap sur AAA</li>
+            <li data-en="0 web font">0 police web</li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">© 2026 OrigAI</p>
     </div>
   </footer>
 
