@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- OrigPDF app icon: red PDF page, folded top-right corner (OrigAI blue
+       underside, as on the moodboard), white origami bird, "PDF" below.
+       Source for `tauri icon` (rendered to brand/origpdf-app-icon-1024.png). -->
+  <defs>
+    <linearGradient id="page" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#F2635E"/>
+      <stop offset="0.55" stop-color="#E53935"/>
+      <stop offset="1" stop-color="#C62828"/>
+    </linearGradient>
+    <linearGradient id="fold" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#90CAF9"/>
+      <stop offset="1" stop-color="#E3F0FF"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#5F0E0E" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <!-- Page with the top-right corner cut off -->
+  <path filter="url(#shadow)" fill="url(#page)"
+        d="M244 72 H636 L856 292 V900 a52 52 0 0 1 -52 52 H244 a52 52 0 0 1 -52 -52 V124 a52 52 0 0 1 52 -52 Z"/>
+  <!-- Folded flap -->
+  <path fill="url(#fold)" d="M636 72 V236 a56 56 0 0 0 56 56 H856 Z"/>
+  <path fill="#B71C1C" opacity="0.25" d="M636 236 a56 56 0 0 0 56 56 H856 L840 308 H700 a72 72 0 0 1 -64 -64 Z"/>
+  <!-- White origami bird (same 5 facets as brand/origpdf-bird.svg) -->
+  <svg x="300" y="236" width="420" height="420" viewBox="80 30 344 418">
+    <polygon points="262,90 416,38 302,221" fill="#FFFFFF"/>
+    <polygon points="256,93 297,228 144,271" fill="#FFE3E1"/>
+    <polygon points="87,239 100,197 182,180 190,185 139,271 117,226" fill="#FFFFFF"/>
+    <polygon points="144,281 301,237 308,245 283,352" fill="#FFFFFF"/>
+    <polygon points="318,247 416,440 282,388" fill="#FFC2BE"/>
+  </svg>
+  <text x="524" y="858" text-anchor="middle" fill="#FFFFFF"
+        font-family="'Segoe UI Black', 'Arial Black', 'Inter', sans-serif" font-weight="900"
+        font-size="210" letter-spacing="6">PDF</text>
+</svg>

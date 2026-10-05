@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr"
+  data-title-fr="Tutellia – OrigAI"
+  data-title-en="Tutellia – OrigAI">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tutellia classe les pièces des dossiers APA et ASH, les rattache à la bonne personne et les envoie au bon destinataire. Pour mandataires judiciaires indépendants (30 € par an) et services (sur devis).">
+  <meta name="theme-color" content="#071A36">
+  <title>Tutellia – OrigAI</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-en="Skip to content">Aller au contenu</a>
+
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="header-brand" aria-label="OrigAI | Accueil">
+        <img src="favicon.svg" alt="" class="logo" width="40" height="40">
+        <span class="brand-name">Orig<span>AI</span></span>
+      </a>
+
+      <nav aria-label="Navigation principale" data-label-fr="Navigation principale" data-label-en="Main navigation" id="main-nav" class="desktop-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" data-en="Home">Accueil</a></li>
+          <li><a href="logiciel.html" data-en="Software">Logiciel</a></li>
+          <li><a href="ia-data.html" data-en="AI &amp; Data">IA &amp; Données</a></li>
+          <li><a href="ergonomie.html" data-en="Ergonomics">Ergonomie</a></li>
+          <li><a href="produits.html" aria-current="true" data-en="Products">Produits</a></li>
+          <li><a href="contact.html" data-en="Contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <fieldset class="lang-toggle desktop-lang lang-switch">
+        <legend class="visually-hidden" data-en="Site language">Langue du site</legend>
+        <div class="lang-options">
+          <label class="lang-option" for="lang-fr-desktop">
+            <input type="radio" name="language-desktop" id="lang-fr-desktop" value="fr" checked>
+            <span class="lang-label">FR<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
+          </label>
+          <label class="lang-option" for="lang-en-desktop">
+            <input type="radio" name="language-desktop" id="lang-en-desktop" value="en">
+            <span class="lang-label">EN<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
+          </label>
+        </div>
+      </fieldset>
+
+      <button type="button" class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="mobile-menu-icon" aria-hidden="true"></span>
+        <span data-lang="fr">Menu</span>
+        <span data-lang="en" hidden>Menu</span>
+      </button>
+
+      <div id="mobile-menu" class="mobile-menu" hidden>
+        <nav aria-label="Navigation principale mobile" data-label-fr="Navigation principale mobile" data-label-en="Main navigation (mobile)">
+          <ul class="mobile-nav-list">
+            <li><a href="index.html" data-en="Home">Accueil</a></li>
+            <li><a href="logiciel.html" data-en="Software">Logiciel</a></li>
+            <li><a href="ia-data.html" data-en="AI &amp; Data">IA &amp; Données</a></li>
+            <li><a href="ergonomie.html" data-en="Ergonomics">Ergonomie</a></li>
+            <li><a href="produits.html" aria-current="true" data-en="Products">Produits</a></li>
+            <li><a href="contact.html" data-en="Contact">Contact</a></li>
+          </ul>
+        </nav>
+        <fieldset class="mobile-lang-toggle lang-switch">
+          <legend data-en="Language">Langue</legend>
+          <div class="lang-options">
+            <label class="lang-option" for="lang-fr-mobile">
+              <input type="radio" name="language-mobile" id="lang-fr-mobile" value="fr" checked>
+              <span class="lang-label">FR<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
+            </label>
+            <label class="lang-option" for="lang-en-mobile">
+              <input type="radio" name="language-mobile" id="lang-en-mobile" value="en">
+              <span class="lang-label">EN<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
+            </label>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero hero--inner hero--product">
+      <div class="container product-hero">
+        <div>
+          <p class="hero-breadcrumb">
+            <a href="index.html" data-en="Home">Accueil</a>
+            <span aria-hidden="true"> / </span>
+            <a href="produits.html" data-en="Products">Produits</a>
+            <span aria-hidden="true"> / </span>
+            Tutellia
+          </p>
+          <p class="eyebrow" data-en="Software for court-appointed guardians (MJPM)">Logiciel pour mandataires judiciaires (MJPM)</p>
+          <h1 data-en="Your case-file paperwork, filed and sent without a second thought.">Les pièces de vos dossiers, rangées et envoyées sans y penser.</h1>
+          <p class="hero-subtitle" data-en="Tutellia files every document in the right case, for the right person, and sends it to the right recipient. You handle it once, when you are already working on it, then forget about it.">Tutellia classe chaque document dans le bon dossier, pour la bonne personne, et l'envoie au bon destinataire. Vous le traitez une fois, au moment où vous travaillez déjà dessus, puis vous l'oubliez.</p>
+          <div class="hero-actions">
+            <a href="#tarifs" class="btn btn--light" data-en="See Tutellia pricing">Voir les tarifs de Tutellia</a>
+            <a href="#telecharger" class="btn btn--ghost" data-en="Download Tutellia">Télécharger Tutellia</a>
+          </div>
+        </div>
+        <img class="product-hero-icon" src="assets/products/tutellia.svg" alt="" width="160" height="160">
+      </div>
+    </section>
+
+    <!-- Screenshot -->
+    <section class="section shot-section" aria-label="Aperçu" data-label-fr="Aperçu" data-label-en="Preview">
+      <div class="container">
+        <figure class="shot fold">
+          <img src="assets/products/tutellia-import-ash.webp" alt="Module ASH de Tutellia après le dépôt de cinq PDF : 5 importés, chacun renommé par personne et trimestre (ASH – MOREAU – Q3 2026…), un dossier créé automatiquement, bouton Envoyer tout (5). Données fictives." width="1200" height="750" fetchpriority="high">
+          <figcaption data-en="Five ASH tables dropped at once: read, renamed, filed, one case file created. Fictitious data.">Cinq tableaux ASH déposés d'un coup : lus, renommés, classés, un dossier créé. Données fictives.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section section--tint" aria-labelledby="principe-heading">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-en="How it works">Le principe</p>
+          <h2 id="principe-heading" data-en="Handle it once, forget it, find it ready.">Traitez une fois, oubliez, retrouvez prêt.</h2>
+        </div>
+        <ol class="steps">
+          <li class="step fold">
+            <span class="step-num" aria-hidden="true">01</span>
+            <h3 data-en="You receive">Vous recevez</h3>
+            <p data-en="A bill, a statement or a letter arrives. While you log it in your usual case software, drag it into the right Tutellia case file. Done: you can forget about it.">Une facture, un relevé, un courrier arrive. Pendant que vous le saisissez dans votre logiciel métier, glissez-le dans le bon dossier Tutellia. C'est fait : vous pouvez l'oublier.</p>
+          </li>
+          <li class="step fold">
+            <span class="step-num" aria-hidden="true">02</span>
+            <h3 data-en="Tutellia files">Tutellia range</h3>
+            <p data-en="For ASH (housing social aid), drop all your tables at once. Each PDF is read, matched to the right person and period, and given a clean name. If the case file does not exist yet, it is created.">Pour l'ASH (aide sociale à l'hébergement), déposez tous vos tableaux d'un coup. Chaque PDF est lu, rattaché à la bonne personne et à la bonne période, puis nommé proprement. Si le dossier n'existe pas encore, il est créé.</p>
+          </li>
+          <li class="step fold">
+            <span class="step-num" aria-hidden="true">03</span>
+            <h3 data-en="Tutellia sends">Tutellia envoie</h3>
+            <p data-en="When the time comes, everything leaves for the right recipients, in standardised emails: the person's name, the period, the attachments. Nothing to type again.">Le moment venu, tout part vers les bons destinataires, dans des emails standardisés : nom de la personne, période, pièces jointes. Rien à ressaisir.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+
+    <!-- Gallery -->
+    <section class="section" aria-label="Captures d'écran" data-label-fr="Captures d'écran" data-label-en="Screenshots">
+      <div class="container gallery">
+        <figure class="shot fold">
+          <img src="assets/products/tutellia-dossier.webp" alt="Fiche du dossier de Jean-Pierre Martin, module APA : trois documents ajoutés (avis de paiement, facture d'aide à domicile, relevé de compte). Données fictives." width="800" height="781" loading="lazy">
+          <figcaption data-en="A case file: documents dropped as they arrive. Fictitious data.">Un dossier : les pièces glissées au fil de l'eau. Données fictives.</figcaption>
+        </figure>
+        <figure class="shot fold">
+          <img src="assets/products/tutellia-envoi.webp" alt="Fenêtre Envoyer tout, dossiers ASH : choix de la période du rapport et liste des cinq dossiers éligibles avec leurs documents. Données fictives." width="800" height="816" loading="lazy">
+          <figcaption data-en="Send all: choose the period, check the list, send. Fictitious data.">Envoyer tout : choisissez la période, vérifiez la liste, envoyez. Données fictives.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section" aria-labelledby="benefices-heading">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-en="What changes">Ce que ça change</p>
+          <h2 id="benefices-heading" data-en="Less time, no mistakes, a clear head.">Moins de temps, zéro erreur, l'esprit libre.</h2>
+        </div>
+        <div class="benefits">
+          <div class="benefit">
+            <p class="benefit-key" data-en="Time">Temps</p>
+            <h3 data-en="Filing happens as you go">Le classement se fait au fil de l'eau</h3>
+            <p data-en="A few seconds, at the moment you are already handling the document. No more sessions spent preparing mailings.">Quelques secondes, au moment où vous traitez déjà le document. Plus de séances de préparation des envois.</p>
+          </div>
+          <div class="benefit">
+            <p class="benefit-key" data-en="Reliability">Fiabilité</p>
+            <h3 data-en="Never the wrong address or name">Jamais la mauvaise adresse ni le mauvais nom</h3>
+            <p data-en="Recipients and names are stored once in the case file. Every email follows the same template, filled in automatically.">Destinataires et noms sont enregistrés une fois dans le dossier. Chaque email suit le même modèle, rempli automatiquement.</p>
+          </div>
+          <div class="benefit">
+            <p class="benefit-key" data-en="Peace of mind">Sérénité</p>
+            <h3 data-en="It is there when you need it">C'est là quand vous en avez besoin</h3>
+            <p data-en="Everything is ready, sorted and traced. You know it is there and reliable, so you can stop thinking about it.">Tout est prêt, rangé et tracé. Vous savez que c'est là et que c'est fiable : vous pouvez cesser d'y penser.</p>
+          </div>
+          <div class="benefit">
+            <p class="benefit-key" data-en="Ease">Simplicité</p>
+            <h3 data-en="Up and running quickly">Pris en main rapidement</h3>
+            <p data-en="Guided tours and built-in guides walk you through setup and everyday use.">Visites guidées et guides intégrés accompagnent la configuration et l'usage quotidien.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features + second screenshot -->
+    <section class="section section--dark on-dark" aria-labelledby="fonctions-heading">
+      <div class="container feature-split">
+        <div>
+          <div class="section-head">
+            <p class="eyebrow" data-en="Features">Fonctionnalités</p>
+            <h2 id="fonctions-heading" data-en="Built for the daily work of an MJPM">Pensé pour le quotidien d'un MJPM</h2>
+          </div>
+          <ul class="facet-list">
+            <li data-en="APA (personal autonomy allowance) and ASH modules, with linked case files when a person is followed in both">Modules APA (allocation personnalisée d'autonomie) et ASH, avec dossiers liés quand une personne est suivie dans les deux</li>
+            <li data-en="Automatic sorting of ASH PDFs by person and period">Tri automatique des PDF ASH par personne et par période</li>
+            <li data-en="Email templates with variables: name, month, year">Modèles d'emails avec variables : nom, mois, année</li>
+            <li data-en="Bulk sending, or one case file at a time">Envoi groupé, ou dossier par dossier</li>
+            <li data-en="Closing emails ready for death or discharge">Derniers emails prêts pour un décès ou un dessaisissement</li>
+            <li data-en="Priorities, search and filters on every case file">Priorités, recherche et filtres sur tous les dossiers</li>
+            <li data-en="Full history: what was sent, to whom, when">Historique complet : quoi, à qui, quand</li>
+            <li data-en="Automatic, signature-verified updates">Mises à jour automatiques, vérifiées par signature</li>
+          </ul>
+        </div>
+        <figure class="shot fold">
+          <img src="assets/products/tutellia-visites.webp" alt="Accueil de Tutellia : fenêtre Bienvenue proposant deux visites guidées, configuration et prise en main. Données fictives." width="1200" height="750" loading="lazy">
+          <figcaption data-en="Two guided tours on first launch. Fictitious data.">Deux visites guidées au premier lancement. Données fictives.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Evolving tool -->
+    <section class="section" aria-labelledby="evolutif-heading">
+      <div class="container narrow">
+        <div class="section-head">
+          <p class="eyebrow" data-en="A living tool">Un outil vivant</p>
+          <h2 id="evolutif-heading" data-en="Tutellia grows with your practice">Tutellia évolue avec votre pratique</h2>
+          <p data-en="Every suggestion counts. Tell me which task still takes you time: if it helps you, it will probably help other guardians too, and it can become a new module available to everyone. Organisations can also have modules built for their own procedures.">Chaque suggestion compte. Dites-moi quelle tâche vous prend encore du temps : si elle vous aide, elle aidera sans doute d'autres mandataires, et elle peut devenir un nouveau module ouvert à tous. Les structures peuvent aussi faire développer des modules propres à leurs procédures.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="tarifs" class="section section--tint" aria-labelledby="tarifs-heading">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-en="Pricing">Tarifs</p>
+          <h2 id="tarifs-heading" data-en="Two ways to work with Tutellia">Deux façons d'utiliser Tutellia</h2>
+        </div>
+        <div class="pricing">
+          <article class="price-card fold" aria-labelledby="offre-solo">
+            <h3 id="offre-solo" data-en="Independent guardian">Mandataire indépendant</h3>
+            <p class="price"><span class="price-amount">30 €</span> <span class="price-unit" data-en="per year, per workstation">par an et par poste</span></p>
+            <p class="price-note" data-en="VAT not applicable, art. 293 B of the French General Tax Code">TVA non applicable, art. 293 B du Code général des impôts</p>
+            <ul class="facet-list">
+              <li data-en="Initial installation, done with you">Installation initiale, réalisée avec vous</li>
+              <li data-en="Corrective and new-feature updates">Mises à jour correctives et évolutives</li>
+              <li data-en="Remote technical support">Support technique à distance</li>
+              <li data-en="Read-only access to your history, guaranteed even after the subscription ends">Accès en lecture à votre historique garanti, même après l'abonnement</li>
+            </ul>
+            <a class="btn btn--primary" href="mailto:tutellia@origai.fr?subject=Tutellia%20-%20demande%20d%27acc%C3%A8s" data-en="Request my access">Demander mon accès</a>
+          </article>
+          <article class="price-card price-card--dark fold" aria-labelledby="offre-structure">
+            <h3 id="offre-structure" data-en="Services and organisations">Services et structures</h3>
+            <p class="price"><span class="price-amount" data-en="Quote">Sur devis</span></p>
+            <p class="price-note" data-en="Depends on team size, infrastructure and the level of service you need">Selon la taille de l'équipe, l'infrastructure et le niveau d'accompagnement</p>
+            <ul class="facet-list">
+              <li data-en="Deployment across your whole organisation">Déploiement à l'échelle de votre structure</li>
+              <li data-en="Installation, maintenance and regular updates handled for you">Installation, maintenance et mises à jour régulières prises en charge</li>
+              <li data-en="Custom modules for your own procedures">Modules sur mesure pour vos procédures</li>
+              <li data-en="Whatever level of support you need, I am there">Au niveau d'accompagnement dont vous avez besoin</li>
+            </ul>
+            <a class="btn btn--light" href="mailto:tutellia@origai.fr?subject=Tutellia%20-%20demande%20de%20devis" data-en="Ask for a quote">Demander un devis</a>
+          </article>
+        </div>
+        <p class="pricing-terms" data-en="Annual subscription, renewed automatically; cancel at least 30 days before the renewal date. Contact: tutellia@origai.fr">Abonnement annuel à reconduction tacite, résiliable au moins 30 jours avant l'échéance. Contact : tutellia@origai.fr</p>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section id="telecharger" class="section" aria-labelledby="telecharger-heading">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-en="Download">Téléchargement</p>
+          <h2 id="telecharger-heading" data-en="Install or update a workstation">Installer ou mettre à jour un poste</h2>
+          <p data-en="For a new workstation, installation is done with you once your access is active. Already installed? Tutellia updates itself.">Pour un nouveau poste, l'installation se fait avec vous une fois votre accès ouvert. Déjà installé ? Tutellia se met à jour tout seul.</p>
+        </div>
+        <div class="product-panel fold">
+          <div class="product-body">
+            <div>
+              <div class="downloads">
+                <a href="/releases/tutellia/Tutellia_2.0.7_x64-setup.exe" class="btn btn--primary" download>
+                  <span data-en="Download Tutellia for Windows">Télécharger Tutellia pour Windows</span>
+                  <span class="btn-meta" data-en=".exe · 43 MB">.exe · 43 Mo</span>
+                </a>
+                <a href="/releases/tutellia/Tutellia_2.0.7_universal.dmg" class="btn btn--outline" download>
+                  <span data-en="Download Tutellia for macOS">Télécharger Tutellia pour macOS</span>
+                  <span class="btn-meta" data-en=".dmg · 168 MB">.dmg · 168 Mo</span>
+                </a>
+              </div>
+              <details class="product-notes">
+                <summary data-en="Release notes 2.0.7">Notes de version 2.0.7</summary>
+                <div class="product-notes-content">
+                  <ul data-lang="fr">
+                    <li>Première version pour macOS (universelle : puce Apple et Intel)</li>
+                    <li>Visites guidées pour la configuration et la prise en main, relançables depuis Paramètres › Général</li>
+                    <li>Guides « Bien démarrer » et « Configurer l'envoi des emails » intégrés</li>
+                    <li>Cloche de notifications pour les messages importants</li>
+                    <li>Gestion de l'abonnement dans Paramètres › Abonnement</li>
+                    <li>Détection automatique des dossiers IMAP et messages d'erreur d'envoi plus clairs</li>
+                  </ul>
+                  <ul data-lang="en" hidden>
+                    <li>First macOS version (universal: Apple silicon and Intel)</li>
+                    <li>Guided tours for setup and everyday use, restartable from Settings › General</li>
+                    <li>Built-in “Getting started” and “Email sending setup” guides</li>
+                    <li>Notification bell for important messages</li>
+                    <li>Subscription management in Settings › Subscription</li>
+                    <li>Automatic IMAP folder detection and clearer sending error messages</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="product-notes">
+                <summary data-en="Installation and verification">Installation et vérification</summary>
+                <div class="product-notes-content">
+                  <div data-lang="fr">
+                    <h3>Windows</h3>
+                    <p>L'installateur n'est pas encore signé par un certificat éditeur : si Windows affiche « Windows a protégé votre ordinateur », cliquez sur « Informations complémentaires », puis « Exécuter quand même ».</p>
+                    <h3>macOS</h3>
+                    <ol>
+                      <li>Ouvrez le fichier .dmg et glissez Tutellia dans Applications.</li>
+                      <li>Tutellia n'est pas encore notarisé par Apple. À la première ouverture, macOS le bloque : ouvrez Réglages Système › Confidentialité et sécurité, puis cliquez sur « Ouvrir quand même ». Sur macOS 14 et antérieur, un clic droit sur l'app › Ouvrir suffit.</li>
+                      <li>Si macOS indique que l'app « est endommagée », lancez dans le Terminal : <code>xattr -dr com.apple.quarantine /Applications/Tutellia.app</code></li>
+                    </ol>
+                    <h3>Empreintes SHA-256</h3>
+                  </div>
+                  <div data-lang="en" hidden>
+                    <h3>Windows</h3>
+                    <p>The installer is not yet signed with a publisher certificate: if Windows shows “Windows protected your PC”, click “More info”, then “Run anyway”.</p>
+                    <h3>macOS</h3>
+                    <ol>
+                      <li>Open the .dmg file and drag Tutellia into Applications.</li>
+                      <li>Tutellia is not yet notarized by Apple. The first time you open it, macOS blocks it: go to System Settings › Privacy &amp; Security and click “Open Anyway”. On macOS 14 and earlier, right-click the app › Open is enough.</li>
+                      <li>If macOS says the app “is damaged”, run this in Terminal: <code>xattr -dr com.apple.quarantine /Applications/Tutellia.app</code></li>
+                    </ol>
+                    <h3>SHA-256 checksums</h3>
+                  </div>
+                  <p>.exe <code>23c901238f6c66937ac3e2f72ea27fe1ca35f043fddfd2dfbaa25632196ed0d2</code></p>
+                  <p>.dmg <code>ca3e419374fc0c45c1deb9b5dcb9810c069de808c28291be239e3f6ef597057c</code></p>
+                </div>
+              </details>
+            </div>
+            <dl class="spec-sheet">
+              <div><dt>Version</dt><dd>2.0.7</dd></div>
+              <div><dt data-en="Released">Publiée le</dt><dd data-en="4 October 2026">4 octobre 2026</dd></div>
+              <div><dt>Windows</dt><dd>Windows 10 / 11, 64 bits</dd></div>
+              <div><dt>macOS</dt><dd data-en="macOS 11 or later, Apple silicon or Intel">macOS 11 ou plus récent, puce Apple ou Intel</dd></div>
+              <div><dt data-en="Updates">Mises à jour</dt><dd data-en="Automatic, signature-verified">Automatiques, vérifiées par signature</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand"><img src="favicon.svg" alt="" width="32" height="32"><span class="footer-wordmark">Orig<span>AI</span></span></p>
+          <p class="footer-tagline" data-en="Custom software, applied AI and digital ergonomics for demanding professional environments.">Logiciels sur mesure, IA appliquée et ergonomie numérique pour les environnements professionnels exigeants.</p>
+          <p class="footer-contact"><a href="mailto:origai.consulting@protonmail.com">origai.consulting@protonmail.com</a></p>
+        </div>
+        <nav aria-label="Plan du site" data-label-fr="Plan du site" data-label-en="Sitemap">
+          <p class="footer-title" aria-hidden="true" data-en="Sitemap">Plan du site</p>
+          <ul class="footer-links">
+          <li><a href="index.html" data-en="Home">Accueil</a></li>
+          <li><a href="logiciel.html" data-en="Software">Logiciel</a></li>
+          <li><a href="ia-data.html" data-en="AI &amp; Data">IA &amp; Données</a></li>
+          <li><a href="ergonomie.html" data-en="Ergonomics">Ergonomie</a></li>
+          <li><a href="produits.html" aria-current="true" data-en="Products">Produits</a></li>
+          <li><a href="contact.html" data-en="Contact">Contact</a></li>
+          <li><a href="confidentialite.html" data-en="Privacy">Confidentialité</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="footer-title" data-en="Digital sobriety">Sobriété numérique</p>
+          <a class="eco-badge" href="https://www.ecoindex.fr/" rel="external noopener">
+            <span class="eco-grade" aria-hidden="true">A</span>
+            <span class="eco-score">EcoIndex A · 83–89/100</span>
+            <span class="eco-detail" data-en="Measured 4 October 2026, ecoindex.fr method">Mesuré le 4 octobre 2026, méthode ecoindex.fr</span>
+          </a>
+          <ul class="footer-claims">
+            <li data-en="WCAG 2.2 AA, aiming for AAA">WCAG 2.2 AA, cap sur AAA</li>
+            <li data-en="0 web font">0 police web</li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">© 2026 OrigAI</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

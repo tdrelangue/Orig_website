@@ -1,45 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr" data-lang="fr"
-  data-title-fr="OrigAI | Développement logiciel sur mesure"
-  data-title-en="OrigAI | Custom software development">
+  data-title-fr="Logiciel sur mesure – OrigAI"
+  data-title-en="Custom software – OrigAI">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Développement d'applications web sur mesure, outils internes, prototypes et plateformes pour environnements professionnels exigeants.">
-  <meta name="theme-color" content="#0B63CE">
-  <title>OrigAI | Développement logiciel sur mesure</title>
+  <meta name="theme-color" content="#071A36">
+  <title>Logiciel sur mesure – OrigAI</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
 </head>
 <body>
-  <a class="skip-link" href="#main">
-    <span data-lang="fr">Aller au contenu</span>
-    <span data-lang="en" hidden>Skip to content</span>
-  </a>
+  <a class="skip-link" href="#main" data-en="Skip to content">Aller au contenu</a>
 
   <header>
     <div class="container header-container">
       <a href="index.html" class="header-brand" aria-label="OrigAI | Accueil">
-        <img src="assets/logo-removebg-preview.png" alt="" class="logo" width="48" height="48">
-        <span class="brand-name">OrigAI</span>
+        <img src="favicon.svg" alt="" class="logo" width="40" height="40">
+        <span class="brand-name">Orig<span>AI</span></span>
       </a>
 
-      <nav aria-label="Navigation principale" id="main-nav" class="desktop-nav">
+      <nav aria-label="Navigation principale" data-label-fr="Navigation principale" data-label-en="Main navigation" id="main-nav" class="desktop-nav">
         <ul class="nav-list">
-          <li><a href="index.html"><span data-lang="fr">Accueil</span><span data-lang="en" hidden>Home</span></a></li>
-          <li><a href="logiciel.html" aria-current="page"><span data-lang="fr">Logiciel</span><span data-lang="en" hidden>Software</span></a></li>
-          <li><a href="ia-data.html"><span data-lang="fr">IA &amp; Données</span><span data-lang="en" hidden>AI &amp; Data</span></a></li>
-          <li><a href="ergonomie.html"><span data-lang="fr">Ergonomie</span><span data-lang="en" hidden>Ergonomics</span></a></li>
-          <li><a href="produits.html"><span data-lang="fr">Produits</span><span data-lang="en" hidden>Products</span></a></li>
-          <li><a href="contact.html"><span data-lang="fr">Contact</span><span data-lang="en" hidden>Contact</span></a></li>
+          <li><a href="index.html" data-en="Home">Accueil</a></li>
+          <li><a href="logiciel.html" aria-current="page" data-en="Software">Logiciel</a></li>
+          <li><a href="ia-data.html" data-en="AI &amp; Data">IA &amp; Données</a></li>
+          <li><a href="ergonomie.html" data-en="Ergonomics">Ergonomie</a></li>
+          <li><a href="produits.html" data-en="Products">Produits</a></li>
+          <li><a href="contact.html" data-en="Contact">Contact</a></li>
         </ul>
       </nav>
 
       <fieldset class="lang-toggle desktop-lang lang-switch">
-        <legend class="visually-hidden">
-          <span data-lang="fr">Langue du site</span>
-          <span data-lang="en" hidden>Site language</span>
-        </legend>
+        <legend class="visually-hidden" data-en="Site language">Langue du site</legend>
         <div class="lang-options">
           <label class="lang-option" for="lang-fr-desktop">
             <input type="radio" name="language-desktop" id="lang-fr-desktop" value="fr" checked>
@@ -59,21 +54,18 @@
       </button>
 
       <div id="mobile-menu" class="mobile-menu" hidden>
-        <nav aria-label="Navigation principale mobile">
+        <nav aria-label="Navigation principale mobile" data-label-fr="Navigation principale mobile" data-label-en="Main navigation (mobile)">
           <ul class="mobile-nav-list">
-            <li><a href="index.html"><span data-lang="fr">Accueil</span><span data-lang="en" hidden>Home</span></a></li>
-            <li><a href="logiciel.html" aria-current="page"><span data-lang="fr">Logiciel</span><span data-lang="en" hidden>Software</span></a></li>
-            <li><a href="ia-data.html"><span data-lang="fr">IA &amp; Données</span><span data-lang="en" hidden>AI &amp; Data</span></a></li>
-            <li><a href="ergonomie.html"><span data-lang="fr">Ergonomie</span><span data-lang="en" hidden>Ergonomics</span></a></li>
-            <li><a href="produits.html"><span data-lang="fr">Produits</span><span data-lang="en" hidden>Products</span></a></li>
-            <li><a href="contact.html"><span data-lang="fr">Contact</span><span data-lang="en" hidden>Contact</span></a></li>
+            <li><a href="index.html" data-en="Home">Accueil</a></li>
+            <li><a href="logiciel.html" aria-current="page" data-en="Software">Logiciel</a></li>
+            <li><a href="ia-data.html" data-en="AI &amp; Data">IA &amp; Données</a></li>
+            <li><a href="ergonomie.html" data-en="Ergonomics">Ergonomie</a></li>
+            <li><a href="produits.html" data-en="Products">Produits</a></li>
+            <li><a href="contact.html" data-en="Contact">Contact</a></li>
           </ul>
         </nav>
         <fieldset class="mobile-lang-toggle lang-switch">
-          <legend>
-            <span data-lang="fr">Langue</span>
-            <span data-lang="en" hidden>Language</span>
-          </legend>
+          <legend data-en="Language">Langue</legend>
           <div class="lang-options">
             <label class="lang-option" for="lang-fr-mobile">
               <input type="radio" name="language-mobile" id="lang-fr-mobile" value="fr" checked>
@@ -95,18 +87,12 @@
     <section class="hero hero--inner">
       <div class="container">
         <p class="hero-breadcrumb">
-          <a href="index.html"><span data-lang="fr">Accueil</span><span data-lang="en" hidden>Home</span></a>
+          <a href="index.html" data-en="Home">Accueil</a>
           <span aria-hidden="true"> / </span>
           <span data-lang="fr">Logiciel</span><span data-lang="en" hidden>Software</span>
         </p>
-        <h1>
-          <span data-lang="fr">Développement logiciel sur mesure</span>
-          <span data-lang="en" hidden>Custom software development</span>
-        </h1>
-        <p class="hero-subtitle">
-          <span data-lang="fr">Applications, outils internes et plateformes conçus pour vos contraintes réelles. Pas pour une liste de fonctionnalités génériques.</span>
-          <span data-lang="en" hidden>Applications, internal tools and platforms designed for your real constraints. Not a generic feature checklist.</span>
-        </p>
+        <h1 data-en="Custom software development">Développement logiciel sur mesure</h1>
+        <p class="hero-subtitle" data-en="Applications, internal tools and platforms designed for your real constraints. Not a generic feature checklist.">Applications, outils internes et plateformes conçus pour vos contraintes réelles. Pas pour une liste de fonctionnalités génériques.</p>
       </div>
     </section>
 
@@ -116,10 +102,7 @@
         <div class="page-layout">
           <div class="page-content">
 
-            <h3>
-              <span data-lang="fr">Ce que j'apporte</span>
-              <span data-lang="en" hidden>What I bring</span>
-            </h3>
+            <h2 data-en="What I bring">Ce que j'apporte</h2>
             <div data-lang="fr">
               <ul>
                 <li>Développement d'applications web orientées métier, adaptées à vos processus réels</li>
@@ -139,10 +122,7 @@
               </ul>
             </div>
 
-            <h3>
-              <span data-lang="fr">Types de livrables</span>
-              <span data-lang="en" hidden>Deliverable types</span>
-            </h3>
+            <h2 data-en="Deliverable types">Types de livrables</h2>
             <div data-lang="fr">
               <ul>
                 <li>Application web accessible depuis n'importe quel navigateur, sans installation</li>
@@ -162,10 +142,7 @@
               </ul>
             </div>
 
-            <h3>
-              <span data-lang="fr">Exemples de problèmes traités</span>
-              <span data-lang="en" hidden>Example problem types</span>
-            </h3>
+            <h2 data-en="Example problem types">Exemples de problèmes traités</h2>
             <div data-lang="fr">
               <p>Ces exemples illustrent des types de situations courantes, sans référence à des clients spécifiques.</p>
               <ul>
@@ -185,43 +162,31 @@
               </ul>
             </div>
 
-            <h3>
-              <span data-lang="fr">Comment ça fonctionne</span>
-              <span data-lang="en" hidden>How it works</span>
-            </h3>
+            <h2 data-en="How it works">Comment ça fonctionne</h2>
             <div data-lang="fr">
-              <ol>
-                <li><strong>Cadrage</strong>: Clarification des besoins réels, périmètre, contraintes techniques et organisationnelles</li>
-                <li><strong>Conception</strong>: Architecture, choix techniques, maquettage UX si nécessaire</li>
-                <li><strong>Développement</strong>: Build itératif avec points de validation réguliers</li>
-                <li><strong>Livraison</strong>: Déploiement, documentation, transfert et accompagnement à la prise en main</li>
+              <ol class="process">
+                <li><strong>Cadrage</strong> Clarification des besoins réels, périmètre, contraintes techniques et organisationnelles</li>
+                <li><strong>Conception</strong> Architecture, choix techniques, maquettage UX si nécessaire</li>
+                <li><strong>Développement</strong> Build itératif avec points de validation réguliers</li>
+                <li><strong>Livraison</strong> Déploiement, documentation, transfert et accompagnement à la prise en main</li>
               </ol>
             </div>
             <div data-lang="en" hidden>
-              <ol>
-                <li><strong>Scoping</strong>: Clarifying real needs, scope, technical and organizational constraints</li>
-                <li><strong>Design</strong>: Architecture, technical choices, UX mockups if needed</li>
-                <li><strong>Development</strong>: Iterative build with regular validation points</li>
-                <li><strong>Delivery</strong>: Deployment, documentation, handover and onboarding support</li>
+              <ol class="process">
+                <li><strong>Scoping</strong> Clarifying real needs, scope, technical and organizational constraints</li>
+                <li><strong>Design</strong> Architecture, technical choices, UX mockups if needed</li>
+                <li><strong>Development</strong> Iterative build with regular validation points</li>
+                <li><strong>Delivery</strong> Deployment, documentation, handover and onboarding support</li>
               </ol>
             </div>
 
           </div>
 
           <!-- Sidebar CTA -->
-          <aside class="sidebar-cta">
-            <h3>
-              <span data-lang="fr">Discutons de votre projet</span>
-              <span data-lang="en" hidden>Let's discuss your project</span>
-            </h3>
-            <p>
-              <span data-lang="fr">Un outil interne à construire ? Un prototype à valider ? Un premier échange sans engagement.</span>
-              <span data-lang="en" hidden>An internal tool to build? A prototype to validate? A first discussion with no commitment.</span>
-            </p>
-            <a href="contact.html" class="btn btn--primary">
-              <span data-lang="fr">Prendre contact</span>
-              <span data-lang="en" hidden>Get in touch</span>
-            </a>
+          <aside class="sidebar-cta fold">
+            <h3 data-en="Let's discuss your project">Discutons de votre projet</h3>
+            <p data-en="An internal tool to build? A prototype to validate? A first discussion with no commitment.">Un outil interne à construire ? Un prototype à valider ? Un premier échange sans engagement.</p>
+            <a href="contact.html" class="btn btn--primary" data-en="Get in touch">Prendre contact</a>
             <p class="sidebar-email">
               <a href="mailto:origai.consulting@protonmail.com">origai.consulting@protonmail.com</a>
             </p>
@@ -234,24 +199,38 @@
 
   <footer>
     <div class="container">
-      <p class="footer-brand">
-        <span data-lang="fr">OrigAI | Développement logiciel, IA appliquée et ergonomie numérique</span>
-        <span data-lang="en" hidden>OrigAI | Software development, applied AI and digital ergonomics</span>
-      </p>
-      <nav class="footer-links" aria-label="Liens du pied de page">
-        <a href="logiciel.html"><span data-lang="fr">Logiciel</span><span data-lang="en" hidden>Software</span></a>
-        <a href="ia-data.html"><span data-lang="fr">IA &amp; Données</span><span data-lang="en" hidden>AI &amp; Data</span></a>
-        <a href="ergonomie.html"><span data-lang="fr">Ergonomie</span><span data-lang="en" hidden>Ergonomics</span></a>
-        <a href="contact.html"><span data-lang="fr">Contact</span><span data-lang="en" hidden>Contact</span></a>
-        <a href="confidentialite.html"><span data-lang="fr">Confidentialité</span><span data-lang="en" hidden>Privacy</span></a>
-      </nav>
-      <p class="footer-contact">
-        <a href="mailto:origai.consulting@protonmail.com">origai.consulting@protonmail.com</a>
-      </p>
-      <p class="footer-note">
-        <span data-lang="fr">Site conçu WCAG 2.2 AA, sans suivi analytique.</span>
-        <span data-lang="en" hidden>WCAG 2.2 AA design, no analytics tracking.</span>
-      </p>
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand"><img src="favicon.svg" alt="" width="32" height="32"><span class="footer-wordmark">Orig<span>AI</span></span></p>
+          <p class="footer-tagline" data-en="Custom software, applied AI and digital ergonomics for demanding professional environments.">Logiciels sur mesure, IA appliquée et ergonomie numérique pour les environnements professionnels exigeants.</p>
+          <p class="footer-contact"><a href="mailto:origai.consulting@protonmail.com">origai.consulting@protonmail.com</a></p>
+        </div>
+        <nav aria-label="Plan du site" data-label-fr="Plan du site" data-label-en="Sitemap">
+          <p class="footer-title" aria-hidden="true" data-en="Sitemap">Plan du site</p>
+          <ul class="footer-links">
+          <li><a href="index.html" data-en="Home">Accueil</a></li>
+          <li><a href="logiciel.html" aria-current="page" data-en="Software">Logiciel</a></li>
+          <li><a href="ia-data.html" data-en="AI &amp; Data">IA &amp; Données</a></li>
+          <li><a href="ergonomie.html" data-en="Ergonomics">Ergonomie</a></li>
+          <li><a href="produits.html" data-en="Products">Produits</a></li>
+          <li><a href="contact.html" data-en="Contact">Contact</a></li>
+          <li><a href="confidentialite.html" data-en="Privacy">Confidentialité</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="footer-title" data-en="Digital sobriety">Sobriété numérique</p>
+          <a class="eco-badge" href="https://www.ecoindex.fr/" rel="external noopener">
+            <span class="eco-grade" aria-hidden="true">A</span>
+            <span class="eco-score">EcoIndex A · 83–89/100</span>
+            <span class="eco-detail" data-en="Measured 4 October 2026, ecoindex.fr method">Mesuré le 4 octobre 2026, méthode ecoindex.fr</span>
+          </a>
+          <ul class="footer-claims">
+            <li data-en="WCAG 2.2 AA, aiming for AAA">WCAG 2.2 AA, cap sur AAA</li>
+            <li data-en="0 web font">0 police web</li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">© 2026 OrigAI</p>
     </div>
   </footer>
 

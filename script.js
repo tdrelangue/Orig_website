@@ -1,7 +1,7 @@
 /**
  * OrigAI - Language Toggle & Form Validation
  * Lightweight, accessible, eco-responsible
- * Target: < 3KB minified
+ * Target: < 3KB minified (no scroll-jacking, no console output)
  */
 
 (function() {
@@ -50,9 +50,9 @@
 
     // Update page title - reads per-page data attributes if present
     var titleFr = document.documentElement.getAttribute('data-title-fr')
-      || 'OrigAI | Logiciels sur mesure, IA appliquée et ergonomie numérique';
+      || 'OrigAI';
     var titleEn = document.documentElement.getAttribute('data-title-en')
-      || 'OrigAI | Custom software, applied AI and digital ergonomics';
+      || 'OrigAI';
     document.title = lang === 'en' ? titleEn : titleFr;
 
     // Toggle visibility of all language content
@@ -72,10 +72,18 @@
       radios[j].checked = radios[j].value === lang;
     }
 
-    // Update nav aria-label
-    var nav = document.getElementById('main-nav');
-    if (nav) {
-      nav.setAttribute('aria-label', lang === 'en' ? 'Main navigation' : 'Navigation principale');
+    // Translate aria-labels and <option> texts that cannot hold two spans
+    var labelled = document.querySelectorAll('[data-label-en]');
+    for (var k = 0; k < labelled.length; k++) {
+      labelled[k].setAttribute('aria-label', labelled[k].getAttribute('data-label-' + lang));
+    }
+    // Text-only elements carry their English text in data-en (fewer DOM nodes)
+    var texts = document.querySelectorAll('[data-en]');
+    for (var m = 0; m < texts.length; m++) {
+      if (!texts[m].hasAttribute('data-fr')) {
+        texts[m].setAttribute('data-fr', texts[m].textContent);
+      }
+      texts[m].textContent = texts[m].getAttribute('data-' + lang);
     }
 
     // Persist to localStorage
@@ -358,170 +366,71 @@
   }
 
   // =========================
-  // Variable Scroll Assist (Experimental)
+  // Contact subject preselect (?sujet=produits)
   // =========================
 
-  /**
-   * Optional "variable scroll speed" effect for desktop wheel/trackpad.
-   * - Enabled via ?scrollfx=1 query param or localStorage
-   * - Disabled on touch devices and when prefers-reduced-motion is set
-   * - Creates subtle resistance over reading blocks, faster scrolling in gaps
-   * - To remove: delete this entire section and the init call
-   */
-  var scrollAssist = {
-    enabled: false,
-    zones: [],
-    viewportCenter: 0,
-    SLOW_MULTIPLIER: 0.3,   // Much slower in reading zones
-    FAST_MULTIPLIER: 1.2,   // Slightly faster in gaps
-    STORAGE_KEY: 'orig_scrollfx'
-  };
-
-  function shouldEnableScrollAssist() {
-    // Check reduced motion preference
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      return false;
-    }
-
-    // Check touch device (coarse pointer = touch)
-    if (window.matchMedia('(pointer: coarse)').matches) {
-      return false;
-    }
-
-    // Check localStorage override first
+  function preselectSubject() {
+    var select = document.getElementById('subject');
+    if (!select) return;
     try {
-      var stored = localStorage.getItem(scrollAssist.STORAGE_KEY);
-      if (stored === 'off') return false;
-      if (stored === 'on') return true;
-    } catch (e) {
-      // localStorage not available
-    }
-
-    // Check URL param
-    try {
-      var urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.get('scrollfx') === '1') {
-        return true;
+      var wanted = new URLSearchParams(window.location.search).get('sujet');
+      if (wanted && select.querySelector('option[value="' + wanted.replace(/[^a-z]/g, '') + '"]')) {
+        select.value = wanted;
       }
     } catch (e) {
       // URLSearchParams not available
     }
-
-    return false;
   }
 
-  function computeScrollZones() {
-    scrollAssist.zones = [];
-    var elements = document.querySelectorAll('.scroll-zone--read');
-    var scrollY = window.scrollY || window.pageYOffset;
+  // =========================
+  // Proof chips (home hero): click/tap toggles, Escape dismisses (WCAG 1.4.13)
+  // =========================
 
-    for (var i = 0; i < elements.length; i++) {
-      var rect = elements[i].getBoundingClientRect();
-      scrollAssist.zones.push({
-        top: rect.top + scrollY,
-        bottom: rect.bottom + scrollY
-      });
-    }
-
-    // Sort by top position
-    scrollAssist.zones.sort(function(a, b) {
-      return a.top - b.top;
-    });
+  function closeProof(chip) {
+    chip.setAttribute('aria-expanded', 'false');
   }
 
-  function isInReadingZone(y) {
-    var zones = scrollAssist.zones;
-    for (var i = 0; i < zones.length; i++) {
-      if (y >= zones[i].top && y <= zones[i].bottom) {
-        return true;
-      }
-      // Early exit if we've passed all possible zones
-      if (zones[i].top > y) {
-        break;
-      }
-    }
-    return false;
+  function handleProofClick(e) {
+    var chip = e.currentTarget;
+    var willOpen = chip.getAttribute('aria-expanded') !== 'true';
+    var chips = document.querySelectorAll('.proof-chip');
+    for (var i = 0; i < chips.length; i++) closeProof(chips[i]);
+    chip.parentNode.removeAttribute('data-dismissed');
+    chip.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
   }
 
-  function handleWheelScroll(e) {
-    // Safety: don't interfere with zoom (Ctrl+wheel)
-    if (e.ctrlKey || e.metaKey) {
-      return;
+  function handleProofEscape(e) {
+    if (e.key !== 'Escape') return;
+    var proofs = document.querySelectorAll('.proof');
+    for (var i = 0; i < proofs.length; i++) {
+      var chip = proofs[i].querySelector('.proof-chip');
+      if (proofs[i].matches(':hover, :focus-within') || chip.getAttribute('aria-expanded') === 'true') {
+        proofs[i].setAttribute('data-dismissed', '');
+        closeProof(chip);
+      }
     }
-
-    // Safety: don't interfere when focused on form inputs
-    var activeEl = document.activeElement;
-    if (activeEl && (activeEl.tagName === 'TEXTAREA' ||
-        (activeEl.tagName === 'INPUT' && activeEl.type !== 'submit' && activeEl.type !== 'button'))) {
-      return;
-    }
-
-    // Get current viewport center position in document coordinates
-    var scrollY = window.scrollY || window.pageYOffset;
-    var viewportHeight = window.innerHeight;
-    var viewportCenter = scrollY + (viewportHeight / 2);
-
-    // Determine multiplier based on whether we're in a reading zone
-    var multiplier = isInReadingZone(viewportCenter)
-      ? scrollAssist.SLOW_MULTIPLIER
-      : scrollAssist.FAST_MULTIPLIER;
-
-    // Calculate adjusted delta
-    var deltaY = e.deltaY;
-
-    // Normalize deltaY for different deltaMode values
-    // 0 = pixels, 1 = lines, 2 = pages
-    if (e.deltaMode === 1) {
-      deltaY *= 20; // Approximate line height
-    } else if (e.deltaMode === 2) {
-      deltaY *= viewportHeight;
-    }
-
-    var adjustedDelta = deltaY * multiplier;
-
-    // Prevent default and apply our adjusted scroll
-    e.preventDefault();
-
-    window.scrollBy({
-      top: adjustedDelta,
-      left: 0,
-      behavior: 'auto'
-    });
   }
 
-  function initVariableScrollAssist() {
-    if (!shouldEnableScrollAssist()) {
-      console.log('[ScrollFX] Disabled. Enable with ?scrollfx=1');
-      return;
+  function handleProofOutside(e) {
+    if (e.target.closest('.proof')) return;
+    var chips = document.querySelectorAll('.proof-chip[aria-expanded="true"]');
+    for (var i = 0; i < chips.length; i++) closeProof(chips[i]);
+  }
+
+  function clearDismissed(e) {
+    e.currentTarget.removeAttribute('data-dismissed');
+  }
+
+  function setupProofs() {
+    var proofs = document.querySelectorAll('.proof');
+    if (!proofs.length) return;
+    for (var i = 0; i < proofs.length; i++) {
+      proofs[i].querySelector('.proof-chip').addEventListener('click', handleProofClick);
+      proofs[i].addEventListener('mouseleave', clearDismissed);
+      proofs[i].addEventListener('focusout', clearDismissed);
     }
-
-    scrollAssist.enabled = true;
-    console.log('[ScrollFX] Enabled - variable scroll speed active');
-
-    // Mark document for potential CSS hooks
-    document.documentElement.setAttribute('data-scrollfx', 'on');
-
-    // Compute zones initially
-    computeScrollZones();
-
-    // Recompute on resize (throttled)
-    var resizeTimeout = null;
-    window.addEventListener('resize', function() {
-      if (resizeTimeout) {
-        clearTimeout(resizeTimeout);
-      }
-      resizeTimeout = setTimeout(computeScrollZones, 200);
-    });
-
-    // Recompute when details elements toggle (zones may shift)
-    document.addEventListener('toggle', function(e) {
-      if (e.target.tagName === 'DETAILS') {
-        setTimeout(computeScrollZones, 50);
-      }
-    }, true);
-
-    // Attach wheel handler with passive: false to allow preventDefault
-    window.addEventListener('wheel', handleWheelScroll, { passive: false });
+    document.addEventListener('keydown', handleProofEscape);
+    document.addEventListener('click', handleProofOutside);
   }
 
   // =========================
@@ -535,7 +444,8 @@
     setupSmoothScroll();
     setupMobileMenu();
     setupScrollEffects();
-    initVariableScrollAssist();
+    preselectSubject();
+    setupProofs();
   }
 
   // Run on DOM ready
