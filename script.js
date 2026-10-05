@@ -383,54 +383,68 @@
   }
 
   // =========================
-  // Proof chips (home hero): click/tap toggles, Escape dismisses (WCAG 1.4.13)
+  // Values bird (home hero): tap/Enter/Space pins a value, Escape dismisses (WCAG 1.4.13)
   // =========================
 
-  function closeProof(chip) {
-    chip.setAttribute('aria-expanded', 'false');
-  }
-
-  function handleProofClick(e) {
-    var chip = e.currentTarget;
-    var willOpen = chip.getAttribute('aria-expanded') !== 'true';
-    var chips = document.querySelectorAll('.proof-chip');
-    for (var i = 0; i < chips.length; i++) closeProof(chips[i]);
-    chip.parentNode.removeAttribute('data-dismissed');
-    chip.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-  }
-
-  function handleProofEscape(e) {
-    if (e.key !== 'Escape') return;
-    var proofs = document.querySelectorAll('.proof');
-    for (var i = 0; i < proofs.length; i++) {
-      var chip = proofs[i].querySelector('.proof-chip');
-      if (proofs[i].matches(':hover, :focus-within') || chip.getAttribute('aria-expanded') === 'true') {
-        proofs[i].setAttribute('data-dismissed', '');
-        closeProof(chip);
-      }
+  function collapseFacets(except) {
+    var facets = document.querySelectorAll('.facet[aria-expanded="true"]');
+    for (var i = 0; i < facets.length; i++) {
+      if (facets[i] !== except) facets[i].setAttribute('aria-expanded', 'false');
     }
   }
 
-  function handleProofOutside(e) {
-    if (e.target.closest('.proof')) return;
-    var chips = document.querySelectorAll('.proof-chip[aria-expanded="true"]');
-    for (var i = 0; i < chips.length; i++) closeProof(chips[i]);
+  function toggleFacet(facet) {
+    var open = facet.getAttribute('aria-expanded') === 'true';
+    collapseFacets(facet);
+    facet.setAttribute('aria-expanded', open ? 'false' : 'true');
+    facet.closest('.hero-art').removeAttribute('data-dismissed');
   }
 
-  function clearDismissed(e) {
+  function handleFacetClick(e) {
+    toggleFacet(e.currentTarget);
+  }
+
+  function handleFacetKey(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleFacet(e.currentTarget);
+    }
+  }
+
+  function handleFacetFocus(e) {
+    collapseFacets(e.currentTarget);
+  }
+
+  function handleValuesEscape(e) {
+    if (e.key !== 'Escape') return;
+    var art = document.querySelector('.hero-art');
+    if (!art) return;
+    collapseFacets(null);
+    art.setAttribute('data-dismissed', '');
+  }
+
+  function handleValuesOutside(e) {
+    if (!e.target.closest('.hero-art')) collapseFacets(null);
+  }
+
+  function clearValuesDismissed(e) {
     e.currentTarget.removeAttribute('data-dismissed');
   }
 
-  function setupProofs() {
-    var proofs = document.querySelectorAll('.proof');
-    if (!proofs.length) return;
-    for (var i = 0; i < proofs.length; i++) {
-      proofs[i].querySelector('.proof-chip').addEventListener('click', handleProofClick);
-      proofs[i].addEventListener('mouseleave', clearDismissed);
-      proofs[i].addEventListener('focusout', clearDismissed);
+  function setupValues() {
+    var art = document.querySelector('.hero-art');
+    if (!art) return;
+    var facets = art.querySelectorAll('.facet');
+    for (var i = 0; i < facets.length; i++) {
+      facets[i].addEventListener('click', handleFacetClick);
+      facets[i].addEventListener('keydown', handleFacetKey);
+      facets[i].addEventListener('focus', handleFacetFocus);
+      facets[i].addEventListener('mouseenter', handleFacetFocus);
     }
-    document.addEventListener('keydown', handleProofEscape);
-    document.addEventListener('click', handleProofOutside);
+    art.addEventListener('mouseleave', clearValuesDismissed);
+    art.addEventListener('focusin', clearValuesDismissed);
+    document.addEventListener('keydown', handleValuesEscape);
+    document.addEventListener('click', handleValuesOutside);
   }
 
   // =========================
@@ -445,7 +459,7 @@
     setupMobileMenu();
     setupScrollEffects();
     preselectSubject();
-    setupProofs();
+    setupValues();
   }
 
   // Run on DOM ready
