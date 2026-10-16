@@ -1,19 +1,11 @@
 {
-    "version": "0.1.0",
-    "notes": "Première version publique",
-    "pub_date": "2026-10-03T01:23:37Z",
-    "platforms": {
-        "windows-x86_64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTeE83Y1RpWGowYnk3cXozeVVWcStFbE5YOFVsWmFpQWdTK202VE9nUHVqb1RsbzFGR3V6VTJyQ0kvKyt0MVM0SFZaQk1sVDVhL2RZdEhaelN0WGhzRVc2RCtnVG1NcVE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwOTkwNTk2CWZpbGU6T3JpZ1BERl8wLjEuMF94NjQtc2V0dXAuZXhlCmNiNlZObmZWWURScnRONkNFL2RiMmtNTGg0Y1h2V3ZlRFFyOUZEMGV4SUwxRDZUOVducGxBSDJsbWQrTE8rM2F1TWg3TE8rT1BscTluTG1ab3VHdkRBPT0K",
-            "url": "https://www.origai.fr/releases/origpdf/OrigPDF_0.1.0_x64-setup.exe"
-        },
-        "darwin-aarch64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTeE83Y1RpWGowYjduQi8zakxoU1NheFJXTU01clM3MkVuQTlTbFpYbUpXMmdEaEpoUkYwakZuSWdGejUxdk5SM1ZqZzY5ajBvVWVpelQ2ZDd5SksyTkhiNFNWWmxIY3dJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxMTQwODI3CWZpbGU6T3JpZ1BERi5hcHAudGFyLmd6Clk2S1VCMGpBMmlEZnFxbGVzcWxEQ1l3T2RqZDZtQkhQM3g4UEt4N09JY0s2ODZkOHN4d296dW9ldEsxZE9oNEFrSzBuamJDVytKTlZsN1oyb0tUUkR3PT0K",
-            "url": "https://www.origai.fr/releases/origpdf/OrigPDF_0.1.0_universal.app.tar.gz"
-        },
-        "darwin-x86_64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTeE83Y1RpWGowYjduQi8zakxoU1NheFJXTU01clM3MkVuQTlTbFpYbUpXMmdEaEpoUkYwakZuSWdGejUxdk5SM1ZqZzY5ajBvVWVpelQ2ZDd5SksyTkhiNFNWWmxIY3dJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxMTQwODI3CWZpbGU6T3JpZ1BERi5hcHAudGFyLmd6Clk2S1VCMGpBMmlEZnFxbGVzcWxEQ1l3T2RqZDZtQkhQM3g4UEt4N09JY0s2ODZkOHN4d296dW9ldEsxZE9oNEFrSzBuamJDVytKTlZsN1oyb0tUUkR3PT0K",
-            "url": "https://www.origai.fr/releases/origpdf/OrigPDF_0.1.0_universal.app.tar.gz"
-        }
-    }
+    "version":  "1.0.1",
+    "notes":  "Impression réparée : choix de l\u0027imprimante, des copies et du recto verso, sélection des pages en vignettes, aperçu agrandissable. Liste des imprimantes rapide. Le zoom change vraiment la taille des pages. Mode sélection de pages sans Ctrl.",
+    "pub_date":  "2026-10-16T11:07:22Z",
+    "platforms":  {
+                      "windows-x86_64":  {
+                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTeE83Y1RpWGowYjRQK0txSzlyd0UzTGZkc25LdlkvRWdtaDJtekZMQzNkYW5aRVNZWXRPeklKeXM5cDNuRHNDZEdHZno0dzFjNVNCU1lYc0U3RDJSS0ZIZkE1SERab1FBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyMTQ4ODQxCWZpbGU6T3JpZ1BERl8xLjAuMV94NjQtc2V0dXAuZXhlCjZIY1JpSkl5Zks4M1VtMVZCUFE1MWtFcFNzM1hxTXFLWFNqNlE1TCtjS1dpS29qZVd3UFJYN2VsNW5DalZnLzFyMm5UclBOcTdadmV4ZXJDSFgwMEFRPT0K",
+                                             "url":  "https://www.origai.fr/releases/origpdf/OrigPDF_1.0.1_x64-setup.exe"
+                                         }
+                  }
 }
