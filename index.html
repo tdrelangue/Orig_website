@@ -6,18 +6,21 @@
   <meta charset="UTF-8">
   <meta name="google-site-verification" content="z3F0Kk6DXpRRSvu4ZbXD2WqdE4uk_0udnUZQn2XD4QY" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="OrigAI : conception et développement de logiciels sur mesure, intégration IA, automatisation intelligente et ergonomie numérique pour environnements professionnels.">
+  <meta name="description" content="OrigAI : conception et développement de logiciels sur mesure, intégration IA, automatisation intelligente et ergonomie numérique pour environnements professionnels." data-content-en="OrigAI designs and builds custom software, AI integration, intelligent automation and digital ergonomics for professional environments.">
   <meta name="theme-color" content="#071A36">
   <title>OrigAI – logiciels sur mesure et IA</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="canonical" href="https://www.origai.fr/">
+  <link rel="alternate" hreflang="fr" href="https://www.origai.fr/">
+  <link rel="alternate" hreflang="en" href="https://www.origai.fr/en/">
+  <link rel="alternate" hreflang="x-default" href="https://www.origai.fr/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="OrigAI : logiciels sur mesure, IA appliquée et ergonomie numérique">
+  <meta property="og:title" content="OrigAI : logiciels sur mesure, IA appliquée et ergonomie numérique" data-content-en="OrigAI: custom software, applied AI and digital ergonomics">
   <meta property="og:url" content="https://www.origai.fr/">
   <meta property="og:image" content="https://www.origai.fr/assets/logo.png">
-  <meta property="og:image:alt" content="Logo OrigAI : oiseau en origami bleu">
+  <meta property="og:image:alt" content="Logo OrigAI : oiseau en origami bleu" data-content-en="OrigAI logo: blue origami bird">
   <meta name="twitter:card" content="summary">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.origai.fr/#organization","name":"OrigAI","url":"https://www.origai.fr/","logo":"https://www.origai.fr/assets/logo.png","email":"origai.consulting@protonmail.com","description":"Logiciels sur mesure, IA appliquée et ergonomie numérique pour les environnements professionnels exigeants.","knowsAbout":["Développement logiciel sur mesure","Intelligence artificielle appliquée","Automatisation","Traitement de données","Ergonomie numérique","Accessibilité numérique (WCAG 2.2)"]},{"@type":"WebSite","@id":"https://www.origai.fr/#website","name":"OrigAI","url":"https://www.origai.fr/","inLanguage":["fr","en"],"publisher":{"@id":"https://www.origai.fr/#organization"}}]}</script>
 </head>
@@ -26,7 +29,7 @@
 
   <header>
     <div class="container header-container">
-      <a href="/" class="header-brand" aria-label="OrigAI, accueil">
+      <a href="/" class="header-brand" aria-label="OrigAI, accueil" data-label-en="OrigAI, home">
         <img src="favicon.svg" alt="" class="logo" width="40" height="40">
         <span class="brand-name">Orig<span>AI</span></span>
       </a>
@@ -42,19 +45,12 @@
         </ul>
       </nav>
 
-      <fieldset class="lang-toggle desktop-lang lang-switch">
-        <legend class="visually-hidden" data-en="Site language">Langue du site</legend>
+      <nav class="lang-toggle desktop-lang lang-switch" aria-label="Langue du site" data-label-en="Site language">
         <div class="lang-options">
-          <label class="lang-option" for="lang-fr-desktop">
-            <input type="radio" name="language-desktop" id="lang-fr-desktop" value="fr" checked>
-            <span class="lang-label">FR<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
-          </label>
-          <label class="lang-option" for="lang-en-desktop">
-            <input type="radio" name="language-desktop" id="lang-en-desktop" value="en">
-            <span class="lang-label">EN<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
-          </label>
+          <a class="lang-label" href="/" hreflang="fr" lang="fr" aria-label="FR, français" aria-current="true">FR</a>
+          <a class="lang-label" href="/en/" hreflang="en" lang="en" aria-label="EN, English">EN</a>
         </div>
-      </fieldset>
+      </nav>
 
       <button type="button" class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu">
         <span class="mobile-menu-icon" aria-hidden="true"></span>
@@ -73,19 +69,13 @@
             <li><a href="contact.html" data-en="Contact">Contact</a></li>
           </ul>
         </nav>
-        <fieldset class="mobile-lang-toggle lang-switch">
-          <legend data-en="Language">Langue</legend>
+        <nav class="mobile-lang-toggle lang-switch" aria-labelledby="lang-legend-mobile">
+          <p id="lang-legend-mobile" class="lang-legend" data-en="Language">Langue</p>
           <div class="lang-options">
-            <label class="lang-option" for="lang-fr-mobile">
-              <input type="radio" name="language-mobile" id="lang-fr-mobile" value="fr" checked>
-              <span class="lang-label">FR<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
-            </label>
-            <label class="lang-option" for="lang-en-mobile">
-              <input type="radio" name="language-mobile" id="lang-en-mobile" value="en">
-              <span class="lang-label">EN<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
-            </label>
+            <a class="lang-label" href="/" hreflang="fr" lang="fr" aria-label="FR, français" aria-current="true">FR</a>
+            <a class="lang-label" href="/en/" hreflang="en" lang="en" aria-label="EN, English">EN</a>
           </div>
-        </fieldset>
+        </nav>
       </div>
     </div>
   </header>

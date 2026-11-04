@@ -7,3 +7,5 @@
   X-Robots-Tag: noindex
 /releases/README.md
   X-Robots-Tag: noindex
+/scripts/*
+  X-Robots-Tag: noindex

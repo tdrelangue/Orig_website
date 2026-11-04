@@ -1,118 +1,12 @@
 /**
- * OrigAI - Language Toggle & Form Validation
+ * OrigAI - Form validation, mobile menu, values bird
+ * Language lives in the URL: French pages at /, English pages at /en/ (scripts/build-en.mjs)
  * Lightweight, accessible, eco-responsible
  * Target: < 3KB minified (no scroll-jacking, no console output)
  */
 
 (function() {
   'use strict';
-
-  var STORAGE_KEY = 'orig_lang';
-  var DEFAULT_LANG = 'fr';
-
-  // =========================
-  // Language Toggle
-  // =========================
-
-  /**
-   * Initialize language from URL, localStorage, or default
-   */
-  function initLanguage() {
-    var lang = DEFAULT_LANG;
-
-    // Check URL parameter first (?lang=en or ?lang=fr)
-    try {
-      var urlParams = new URLSearchParams(window.location.search);
-      var urlLang = urlParams.get('lang');
-      if (urlLang === 'fr' || urlLang === 'en') {
-        lang = urlLang;
-      } else {
-        // Check localStorage
-        var storedLang = localStorage.getItem(STORAGE_KEY);
-        if (storedLang === 'fr' || storedLang === 'en') {
-          lang = storedLang;
-        }
-      }
-    } catch (e) {
-      // URLSearchParams or localStorage not available
-    }
-
-    setLanguage(lang);
-  }
-
-  /**
-   * Set the active language
-   */
-  function setLanguage(lang) {
-    // Update HTML lang attribute and data-lang attribute
-    document.documentElement.lang = lang;
-    document.documentElement.setAttribute('data-lang', lang);
-
-    // Update page title - reads per-page data attributes if present
-    var titleFr = document.documentElement.getAttribute('data-title-fr')
-      || 'OrigAI';
-    var titleEn = document.documentElement.getAttribute('data-title-en')
-      || 'OrigAI';
-    document.title = lang === 'en' ? titleEn : titleFr;
-
-    // Toggle visibility of all language content
-    var allLangElements = document.querySelectorAll('[data-lang]');
-    for (var i = 0; i < allLangElements.length; i++) {
-      var el = allLangElements[i];
-      if (el.getAttribute('data-lang') === lang) {
-        el.removeAttribute('hidden');
-      } else {
-        el.setAttribute('hidden', '');
-      }
-    }
-
-    // Update radio button state for both desktop and mobile groups
-    var radios = document.querySelectorAll('input[name="language-desktop"], input[name="language-mobile"]');
-    for (var j = 0; j < radios.length; j++) {
-      radios[j].checked = radios[j].value === lang;
-    }
-
-    // Translate aria-labels and <option> texts that cannot hold two spans
-    var labelled = document.querySelectorAll('[data-label-en]');
-    for (var k = 0; k < labelled.length; k++) {
-      labelled[k].setAttribute('aria-label', labelled[k].getAttribute('data-label-' + lang));
-    }
-    // Text-only elements carry their English text in data-en (fewer DOM nodes)
-    var texts = document.querySelectorAll('[data-en]');
-    for (var m = 0; m < texts.length; m++) {
-      if (!texts[m].hasAttribute('data-fr')) {
-        texts[m].setAttribute('data-fr', texts[m].textContent);
-      }
-      texts[m].textContent = texts[m].getAttribute('data-' + lang);
-    }
-
-    // Persist to localStorage
-    try {
-      localStorage.setItem(STORAGE_KEY, lang);
-    } catch (e) {
-      // localStorage not available
-    }
-  }
-
-  /**
-   * Handle language toggle change
-   */
-  function handleLanguageChange(e) {
-    var newLang = e.target.value;
-    if (newLang === 'fr' || newLang === 'en') {
-      setLanguage(newLang);
-    }
-  }
-
-  /**
-   * Setup language toggle listeners
-   */
-  function setupLanguageToggle() {
-    var radios = document.querySelectorAll('input[name="language-desktop"], input[name="language-mobile"]');
-    for (var i = 0; i < radios.length; i++) {
-      radios[i].addEventListener('change', handleLanguageChange);
-    }
-  }
 
   // =========================
   // Form Validation
@@ -452,8 +346,6 @@
   // =========================
 
   function init() {
-    initLanguage();
-    setupLanguageToggle();
     setupFormValidation();
     setupSmoothScroll();
     setupMobileMenu();

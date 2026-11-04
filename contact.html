@@ -5,18 +5,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Réserver un échange, demander un audit ou prendre contact avec OrigAI pour un projet logiciel, IA ou ergonomie numérique.">
+  <meta name="description" content="Réserver un échange, demander un audit ou prendre contact avec OrigAI pour un projet logiciel, IA ou ergonomie numérique." data-content-en="Book a call, request an audit or get in touch with OrigAI about a software, AI or digital ergonomics project.">
   <meta name="theme-color" content="#071A36">
   <title>Contact – OrigAI</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="canonical" href="https://www.origai.fr/contact.html">
+  <link rel="alternate" hreflang="fr" href="https://www.origai.fr/contact.html">
+  <link rel="alternate" hreflang="en" href="https://www.origai.fr/en/contact.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.origai.fr/contact.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Contact – OrigAI">
   <meta property="og:url" content="https://www.origai.fr/contact.html">
   <meta property="og:image" content="https://www.origai.fr/assets/logo.png">
-  <meta property="og:image:alt" content="Logo OrigAI : oiseau en origami bleu">
+  <meta property="og:image:alt" content="Logo OrigAI : oiseau en origami bleu" data-content-en="OrigAI logo: blue origami bird">
   <meta name="twitter:card" content="summary">
 </head>
 <body>
@@ -24,7 +27,7 @@
 
   <header>
     <div class="container header-container">
-      <a href="/" class="header-brand" aria-label="OrigAI | Accueil">
+      <a href="/" class="header-brand" aria-label="OrigAI | Accueil" data-label-en="OrigAI, home">
         <img src="favicon.svg" alt="" class="logo" width="40" height="40">
         <span class="brand-name">Orig<span>AI</span></span>
       </a>
@@ -40,19 +43,12 @@
         </ul>
       </nav>
 
-      <fieldset class="lang-toggle desktop-lang lang-switch">
-        <legend class="visually-hidden" data-en="Site language">Langue du site</legend>
+      <nav class="lang-toggle desktop-lang lang-switch" aria-label="Langue du site" data-label-en="Site language">
         <div class="lang-options">
-          <label class="lang-option" for="lang-fr-desktop">
-            <input type="radio" name="language-desktop" id="lang-fr-desktop" value="fr" checked>
-            <span class="lang-label">FR<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
-          </label>
-          <label class="lang-option" for="lang-en-desktop">
-            <input type="radio" name="language-desktop" id="lang-en-desktop" value="en">
-            <span class="lang-label">EN<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
-          </label>
+          <a class="lang-label" href="/contact.html" hreflang="fr" lang="fr" aria-label="FR, français" aria-current="true">FR</a>
+          <a class="lang-label" href="/en/contact.html" hreflang="en" lang="en" aria-label="EN, English">EN</a>
         </div>
-      </fieldset>
+      </nav>
 
       <button type="button" class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu">
         <span class="mobile-menu-icon" aria-hidden="true"></span>
@@ -71,19 +67,13 @@
             <li><a href="contact.html" aria-current="page" data-en="Contact">Contact</a></li>
           </ul>
         </nav>
-        <fieldset class="mobile-lang-toggle lang-switch">
-          <legend data-en="Language">Langue</legend>
+        <nav class="mobile-lang-toggle lang-switch" aria-labelledby="lang-legend-mobile">
+          <p id="lang-legend-mobile" class="lang-legend" data-en="Language">Langue</p>
           <div class="lang-options">
-            <label class="lang-option" for="lang-fr-mobile">
-              <input type="radio" name="language-mobile" id="lang-fr-mobile" value="fr" checked>
-              <span class="lang-label">FR<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
-            </label>
-            <label class="lang-option" for="lang-en-mobile">
-              <input type="radio" name="language-mobile" id="lang-en-mobile" value="en">
-              <span class="lang-label">EN<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
-            </label>
+            <a class="lang-label" href="/contact.html" hreflang="fr" lang="fr" aria-label="FR, français" aria-current="true">FR</a>
+            <a class="lang-label" href="/en/contact.html" hreflang="en" lang="en" aria-label="EN, English">EN</a>
           </div>
-        </fieldset>
+        </nav>
       </div>
     </div>
   </header>
@@ -110,7 +100,7 @@
             <h3 data-en="Book a call">Réserver un échange</h3>
             <p data-en="A first 30-minute call to understand your need and see if working together makes sense. No commitment.">Un premier appel de 30 minutes pour comprendre votre besoin et voir si une collaboration a du sens. Sans engagement.</p>
             <!-- Replace the href below with your actual Calendly or booking link -->
-            <a href="mailto:origai.consulting@protonmail.com?subject=Demande%20d%27échange" class="btn btn--primary" data-en="Suggest a time">Proposer un créneau</a>
+            <a href="mailto:origai.consulting@protonmail.com?subject=Demande%20d%27échange" data-href-en="mailto:origai.consulting@protonmail.com?subject=Call%20request" class="btn btn--primary" data-en="Suggest a time">Proposer un créneau</a>
           </div>
 
           <!-- Option 2: Request an audit -->

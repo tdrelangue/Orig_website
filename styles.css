@@ -414,8 +414,7 @@ nav {
 
 /* Language toggle */
 .lang-toggle {
-  border: none;
-  flex-shrink: 0;
+  flex: none;
 }
 
 .lang-options {
@@ -427,17 +426,6 @@ nav {
   padding: 3px;
 }
 
-.lang-option {
-  display: block;
-  cursor: pointer;
-}
-
-.lang-option input[type="radio"] {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
 .lang-label {
   display: block;
   padding: 0.4rem 0.7rem;
@@ -446,31 +434,23 @@ nav {
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--ink-2);
+  text-decoration: none;
   border-radius: 2px;
   line-height: 1;
   transition: background-color var(--fast) ease, color var(--fast) ease;
 }
 
-.lang-option:hover .lang-label {
+.lang-label:hover {
   background: var(--blue-50);
 }
 
-.lang-option input[type="radio"]:checked + .lang-label {
+.lang-label[aria-current] {
   background: var(--navy-800);
   color: var(--on-dark);
 }
 
-.lang-option input[type="radio"]:focus-visible + .lang-label {
-  outline: 3px solid var(--blue-700);
+.lang-label:focus-visible {
   outline-offset: 2px;
-}
-
-.lang-current {
-  display: none;
-}
-
-.lang-option input[type="radio"]:checked + .lang-label .lang-current {
-  display: inline;
 }
 
 /* Mobile menu */
@@ -547,10 +527,10 @@ nav {
 
 .mobile-lang-toggle {
   margin-top: var(--space-md);
-  border: none;
+  flex: none;
 }
 
-.mobile-lang-toggle legend {
+.lang-legend {
   font-weight: 600;
   font-size: 0.9375rem;
   margin-bottom: var(--space-xs);
