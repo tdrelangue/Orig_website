@@ -1,0 +1,9 @@
+# Netlify response headers.
+# Maintainer notes are published with the site (repo root = publish folder):
+# keep them reachable but out of search results.
+/README.md
+  X-Robots-Tag: noindex
+/assets/README.md
+  X-Robots-Tag: noindex
+/releases/README.md
+  X-Robots-Tag: noindex

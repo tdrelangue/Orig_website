@@ -1,4 +1,5 @@
-# robots.txt for OrigAI accessibility consulting site
+# robots.txt for www.origai.fr
+# All public pages are open to every crawler, including search and AI search bots.
 
 User-agent: *
 Allow: /
