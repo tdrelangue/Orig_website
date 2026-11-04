@@ -157,12 +157,14 @@ function run(check) {
   let failed = false;
   for (const file of Object.keys(PAGES)) {
     const source = fs.readFileSync(path.join(ROOT, file), 'utf8');
-    const { html, missing } = buildPage(file, source);
+    const { html: built, missing } = buildPage(file, source);
+    const html = built.replace(/\r\n/g, '\n');
     const frenchVisible = mapElements(source, /<(?!html\b)[a-zA-Z][^>]*\sdata-lang="en"[^>]*>/, () => '');
     const problems = [...missing, ...findUntranslated(frenchVisible, html)];
     for (const p of problems) process.stderr.write(`${file}: untranslated ${p}\n`);
     const target = path.join(ROOT, enFile(file));
-    const current = fs.existsSync(target) ? fs.readFileSync(target, 'utf8') : null;
+    // Line endings follow git's autocrlf setting, so they never count as drift.
+    const current = fs.existsSync(target) ? fs.readFileSync(target, 'utf8').replace(/\r\n/g, '\n') : null;
     if (check && current !== html) process.stderr.write(`${enFile(file)}: out of date, run node scripts/build-en.mjs\n`);
     if (!check && current !== html) fs.mkdirSync(path.dirname(target), { recursive: true });
     if (!check && current !== html) fs.writeFileSync(target, html);
