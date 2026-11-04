@@ -13,3 +13,6 @@ https://orig-audit.netlify.app/releases/*   /releases/:splat   200!
 
 # Everything else on the old address: permanent redirect to the new domain.
 https://orig-audit.netlify.app/*            https://www.origai.fr/:splat   301!
+
+# English pages: unknown addresses under /en/ get the English 404 (not forced: real files win).
+/en/*   /en/404.html   404

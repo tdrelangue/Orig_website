@@ -5,18 +5,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="OrigPDF : lire, annoter, signer, organiser et convertir vos PDF sur votre ordinateur. Gratuit, sans cloud, sans télémétrie, pour Windows et macOS.">
+  <meta name="description" content="OrigPDF : lire, annoter, signer, organiser et convertir vos PDF sur votre ordinateur. Gratuit, sans cloud, sans télémétrie, pour Windows et macOS." data-content-en="OrigPDF: read, annotate, sign, organise and convert your PDFs on your own computer. Free, no cloud, no telemetry, for Windows and macOS.">
   <meta name="theme-color" content="#071A36">
   <title>OrigPDF – OrigAI</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="canonical" href="https://www.origai.fr/origpdf.html">
+  <link rel="alternate" hreflang="fr" href="https://www.origai.fr/origpdf.html">
+  <link rel="alternate" hreflang="en" href="https://www.origai.fr/en/origpdf.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.origai.fr/origpdf.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="OrigPDF – OrigAI">
   <meta property="og:url" content="https://www.origai.fr/origpdf.html">
   <meta property="og:image" content="https://www.origai.fr/assets/logo.png">
-  <meta property="og:image:alt" content="Logo OrigAI : oiseau en origami bleu">
+  <meta property="og:image:alt" content="Logo OrigAI : oiseau en origami bleu" data-content-en="OrigAI logo: blue origami bird">
   <meta name="twitter:card" content="summary">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "OrigPDF", "url": "https://www.origai.fr/origpdf.html", "applicationCategory": "BusinessApplication", "operatingSystem": "Windows 10, Windows 11, macOS 11+", "softwareVersion": "1.0.1", "description": "Atelier PDF gratuit qui travaille entièrement sur votre ordinateur : lire, annoter, signer, organiser, convertir.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "@id": "https://www.origai.fr/#organization", "name": "OrigAI", "url": "https://www.origai.fr/", "logo": "https://www.origai.fr/assets/logo.png", "email": "origai.consulting@protonmail.com"}}</script>
 </head>
@@ -25,7 +28,7 @@
 
   <header>
     <div class="container header-container">
-      <a href="/" class="header-brand" aria-label="OrigAI | Accueil">
+      <a href="/" class="header-brand" aria-label="OrigAI | Accueil" data-label-en="OrigAI, home">
         <img src="favicon.svg" alt="" class="logo" width="40" height="40">
         <span class="brand-name">Orig<span>AI</span></span>
       </a>
@@ -41,19 +44,12 @@
         </ul>
       </nav>
 
-      <fieldset class="lang-toggle desktop-lang lang-switch">
-        <legend class="visually-hidden" data-en="Site language">Langue du site</legend>
+      <nav class="lang-toggle desktop-lang lang-switch" aria-label="Langue du site" data-label-en="Site language">
         <div class="lang-options">
-          <label class="lang-option" for="lang-fr-desktop">
-            <input type="radio" name="language-desktop" id="lang-fr-desktop" value="fr" checked>
-            <span class="lang-label">FR<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
-          </label>
-          <label class="lang-option" for="lang-en-desktop">
-            <input type="radio" name="language-desktop" id="lang-en-desktop" value="en">
-            <span class="lang-label">EN<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
-          </label>
+          <a class="lang-label" href="/origpdf.html" hreflang="fr" lang="fr" aria-label="FR, français" aria-current="true">FR</a>
+          <a class="lang-label" href="/en/origpdf.html" hreflang="en" lang="en" aria-label="EN, English">EN</a>
         </div>
-      </fieldset>
+      </nav>
 
       <button type="button" class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu">
         <span class="mobile-menu-icon" aria-hidden="true"></span>
@@ -72,19 +68,13 @@
             <li><a href="contact.html" data-en="Contact">Contact</a></li>
           </ul>
         </nav>
-        <fieldset class="mobile-lang-toggle lang-switch">
-          <legend data-en="Language">Langue</legend>
+        <nav class="mobile-lang-toggle lang-switch" aria-labelledby="lang-legend-mobile">
+          <p id="lang-legend-mobile" class="lang-legend" data-en="Language">Langue</p>
           <div class="lang-options">
-            <label class="lang-option" for="lang-fr-mobile">
-              <input type="radio" name="language-mobile" id="lang-fr-mobile" value="fr" checked>
-              <span class="lang-label">FR<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
-            </label>
-            <label class="lang-option" for="lang-en-mobile">
-              <input type="radio" name="language-mobile" id="lang-en-mobile" value="en">
-              <span class="lang-label">EN<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
-            </label>
+            <a class="lang-label" href="/origpdf.html" hreflang="fr" lang="fr" aria-label="FR, français" aria-current="true">FR</a>
+            <a class="lang-label" href="/en/origpdf.html" hreflang="en" lang="en" aria-label="EN, English">EN</a>
           </div>
-        </fieldset>
+        </nav>
       </div>
     </div>
   </header>
@@ -118,7 +108,7 @@
     <section class="section shot-section" aria-label="Aperçu" data-label-fr="Aperçu" data-label-en="Preview">
       <div class="container">
         <figure class="shot fold">
-          <img src="assets/products/origpdf-document.webp" alt="OrigPDF avec un rapport ouvert : onglets de documents en haut, vignettes des pages à gauche, page avec tableau et graphique au centre, panneau d'outils de pages à droite. Document fictif." width="1200" height="750" fetchpriority="high">
+          <img src="assets/products/origpdf-document.webp" alt="OrigPDF avec un rapport ouvert : onglets de documents en haut, vignettes des pages à gauche, page avec tableau et graphique au centre, panneau d'outils de pages à droite. Document fictif." data-alt-en="OrigPDF with a report open: document tabs at the top, page thumbnails on the left, a page with a table and a chart in the centre, page tools panel on the right. Fictitious document." width="1200" height="750" fetchpriority="high">
           <figcaption data-en="Tabs, page thumbnails, tools at hand. Fictitious document.">Onglets, vignettes des pages, outils à portée de main. Document fictif.</figcaption>
         </figure>
       </div>
@@ -183,7 +173,7 @@
           </ul>
         </div>
         <figure class="shot fold">
-          <img src="assets/products/origpdf-accueil.webp" alt="Accueil d'OrigPDF : zone de dépôt avec la mention « Les fichiers restent sur votre ordinateur. Rien n'est envoyé. », liste des documents récents et boutons de création de PDF." width="1200" height="494" loading="lazy">
+          <img src="assets/products/origpdf-accueil.webp" alt="Accueil d'OrigPDF : zone de dépôt avec la mention « Les fichiers restent sur votre ordinateur. Rien n'est envoyé. », liste des documents récents et boutons de création de PDF." data-alt-en="OrigPDF home screen: drop zone reading “Files stay on your computer. Nothing is sent.” (shown in French), list of recent documents and PDF creation buttons." width="1200" height="494" loading="lazy">
           <figcaption data-en="Home: drop a PDF, find your recent files. Fictitious documents.">L'accueil : déposez un PDF, retrouvez vos fichiers récents. Documents fictifs.</figcaption>
         </figure>
       </div>
@@ -193,7 +183,7 @@
     <section class="section" aria-label="Organiser les pages" data-label-fr="Organiser les pages" data-label-en="Organise pages">
       <div class="container">
         <figure class="shot fold">
-          <img src="assets/products/origpdf-pages.webp" alt="Vue Organiser les pages d'OrigPDF : les quatre pages du document en vignettes, une page sélectionnée, boutons déplacer à gauche ou à droite, pivoter de 90 degrés, supprimer." width="1200" height="309" loading="lazy">
+          <img src="assets/products/origpdf-pages.webp" alt="Vue Organiser les pages d'OrigPDF : les quatre pages du document en vignettes, une page sélectionnée, boutons déplacer à gauche ou à droite, pivoter de 90 degrés, supprimer." data-alt-en="OrigPDF Organise pages view: the four pages of the document as thumbnails, one page selected, buttons to move left or right, rotate 90 degrees, delete." width="1200" height="309" loading="lazy">
           <figcaption data-en="Organise pages: select, move, rotate, delete. Fictitious document.">Organiser les pages : sélectionner, déplacer, pivoter, supprimer. Document fictif.</figcaption>
         </figure>
       </div>
@@ -315,7 +305,7 @@
             <dl class="spec-sheet">
               <div><dt>Version</dt><dd data-en="1.0.1 (Windows), 0.1.0 (macOS)">1.0.1 (Windows), 0.1.0 (macOS)</dd></div>
               <div><dt data-en="Released">Publiée le</dt><dd data-en="16 Oct. 2026 (Windows), 4 Oct. 2026 (macOS)">16 oct. 2026 (Windows), 4 oct. 2026 (macOS)</dd></div>
-              <div><dt>Windows</dt><dd>Windows 10 / 11, 64 bits</dd></div>
+              <div><dt>Windows</dt><dd data-en="Windows 10 / 11, 64-bit">Windows 10 / 11, 64 bits</dd></div>
               <div><dt>macOS</dt><dd data-en="macOS 11 or later, Apple silicon or Intel">macOS 11 ou plus récent, puce Apple ou Intel</dd></div>
               <div><dt data-en="Updates">Mises à jour</dt><dd data-en="Automatic, signature-verified">Automatiques, vérifiées par signature</dd></div>
             </dl>

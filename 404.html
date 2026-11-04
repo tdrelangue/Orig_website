@@ -17,7 +17,7 @@
 
   <header>
     <div class="container header-container">
-      <a href="/" class="header-brand" aria-label="OrigAI | Accueil">
+      <a href="/" class="header-brand" aria-label="OrigAI | Accueil" data-label-en="OrigAI, home">
         <img src="/favicon.svg" alt="" class="logo" width="40" height="40">
         <span class="brand-name">Orig<span>AI</span></span>
       </a>
@@ -33,19 +33,12 @@
         </ul>
       </nav>
 
-      <fieldset class="lang-toggle desktop-lang lang-switch">
-        <legend class="visually-hidden" data-en="Site language">Langue du site</legend>
+      <nav class="lang-toggle desktop-lang lang-switch" aria-label="Langue du site" data-label-en="Site language">
         <div class="lang-options">
-          <label class="lang-option" for="lang-fr-desktop">
-            <input type="radio" name="language-desktop" id="lang-fr-desktop" value="fr" checked>
-            <span class="lang-label">FR<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
-          </label>
-          <label class="lang-option" for="lang-en-desktop">
-            <input type="radio" name="language-desktop" id="lang-en-desktop" value="en">
-            <span class="lang-label">EN<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
-          </label>
+          <a class="lang-label" href="/404.html" hreflang="fr" lang="fr" aria-label="FR, français" aria-current="true">FR</a>
+          <a class="lang-label" href="/en/404.html" hreflang="en" lang="en" aria-label="EN, English">EN</a>
         </div>
-      </fieldset>
+      </nav>
 
       <button type="button" class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu">
         <span class="mobile-menu-icon" aria-hidden="true"></span>
@@ -64,19 +57,13 @@
             <li><a href="/contact.html" data-en="Contact">Contact</a></li>
           </ul>
         </nav>
-        <fieldset class="mobile-lang-toggle lang-switch">
-          <legend data-en="Language">Langue</legend>
+        <nav class="mobile-lang-toggle lang-switch" aria-labelledby="lang-legend-mobile">
+          <p id="lang-legend-mobile" class="lang-legend" data-en="Language">Langue</p>
           <div class="lang-options">
-            <label class="lang-option" for="lang-fr-mobile">
-              <input type="radio" name="language-mobile" id="lang-fr-mobile" value="fr" checked>
-              <span class="lang-label">FR<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
-            </label>
-            <label class="lang-option" for="lang-en-mobile">
-              <input type="radio" name="language-mobile" id="lang-en-mobile" value="en">
-              <span class="lang-label">EN<span class="lang-current visually-hidden" data-lang="fr"> (actuel)</span><span class="lang-current visually-hidden" data-lang="en" hidden> (current)</span></span>
-            </label>
+            <a class="lang-label" href="/404.html" hreflang="fr" lang="fr" aria-label="FR, français" aria-current="true">FR</a>
+            <a class="lang-label" href="/en/404.html" hreflang="en" lang="en" aria-label="EN, English">EN</a>
           </div>
-        </fieldset>
+        </nav>
       </div>
     </div>
   </header>
