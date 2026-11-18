@@ -1,11 +1,11 @@
 {
-    "version":  "1.0.1",
-    "notes":  "Impression réparée : choix de l\u0027imprimante, des copies et du recto verso, sélection des pages en vignettes, aperçu agrandissable. Liste des imprimantes rapide. Le zoom change vraiment la taille des pages. Mode sélection de pages sans Ctrl.",
-    "pub_date":  "2026-10-16T11:07:22Z",
-    "platforms":  {
-                      "windows-x86_64":  {
-                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTeE83Y1RpWGowYjRQK0txSzlyd0UzTGZkc25LdlkvRWdtaDJtekZMQzNkYW5aRVNZWXRPeklKeXM5cDNuRHNDZEdHZno0dzFjNVNCU1lYc0U3RDJSS0ZIZkE1SERab1FBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyMTQ4ODQxCWZpbGU6T3JpZ1BERl8xLjAuMV94NjQtc2V0dXAuZXhlCjZIY1JpSkl5Zks4M1VtMVZCUFE1MWtFcFNzM1hxTXFLWFNqNlE1TCtjS1dpS29qZVd3UFJYN2VsNW5DalZnLzFyMm5UclBOcTdadmV4ZXJDSFgwMEFRPT0K",
-                                             "url":  "https://www.origai.fr/releases/origpdf/OrigPDF_1.0.1_x64-setup.exe"
-                                         }
-                  }
+    "version": "1.0.2",
+    "notes": "Accueil en pleine largeur, sans barre de défilement horizontale. Groupes : ajouter plusieurs fichiers d'un coup, lier un dossier suivi automatiquement. Ctrl+D ajoute aux favoris, Ctrl+Maj+D à un groupe. Projets LaTeX, onglets détachables, panneaux Signets, Plan, Propriétés et Contenu, paramètres en onglets.",
+    "pub_date": "2026-11-18T12:44:32Z",
+    "platforms": {
+        "windows-x86_64": {
+            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTeE83Y1RpWGowYjh4emg5bmN5cnFhT2VINFMvM0t0OTArN3NIaTJEejdRUk5Wbmc1LzI0aTlLWHJVUXJub1ZadEQ0dWJaT3dWNzNDVDhtcmJwdFJ0K2dodWRIR2piandjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDA1ODcxCWZpbGU6T3JpZ1BERl8xLjAuMl94NjQtc2V0dXAuZXhlCkxZOCthQVpFNDQySm5PSllFYW1Sb0h4V3R6dXFTSjNFWndPY25FbGwxeThLK3JxUUpMU0hzNXlxSUZnQzR6TmJDcGk2dkhYLy93REVtem02VEhPVUJBPT0K",
+            "url": "https://www.origai.fr/releases/origpdf/OrigPDF_1.0.2_x64-setup.exe"
+        }
+    }
 }
