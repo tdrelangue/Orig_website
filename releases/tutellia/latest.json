@@ -1,11 +1,11 @@
 {
-    "version": "2.0.8",
-    "notes": "Nouvel écran « Trier des documents » : déposez vos fichiers sur la liste des dossiers, choisissez le dossier de chacun avec un aperçu, et annulez un rangement à tout moment. Emplacement des documents au choix (Paramètres › Général) : un dossier OneDrive, SharePoint ou réseau pour retrouver vos documents sur plusieurs ordinateurs. Bouton « Tester l’application » avec des données fictives.",
-    "pub_date": "2026-10-11T20:50:26Z",
-    "platforms": {
-        "windows-x86_64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTYXZEMEpPS2k1Yll3NmZDbGtDeGhlVGxsZWMvZGF5QVJlanlNRU96eFhzVzBWYTdVc0Voc20rWVhuZEhLR2ROUm90K2g2eEhKVmR4UENxclRlTHgzZlM2QjRPYWtDUFFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNzUxNzE4CWZpbGU6VHV0ZWxsaWFfMi4wLjhfeDY0LXNldHVwLmV4ZQpDd2RKQS9PM29FK3pOSXF3TDFpTjMyTHd3WGJ0anM4UEt1U2xmdEpLT0djU0hWcno3cVZlUE5JTnFxVkQrSDE4bURoeHJYVU1TSExnK0JsSW8wM3pDQT09Cg==",
-            "url": "https://www.origai.fr/releases/tutellia/Tutellia_2.0.8_x64-setup.exe"
-        }
-    }
+    "version":  "2.1.1",
+    "notes":  "Tutellia reçoit les documents envoyés depuis OrigPDF et les range dans le bon module à l\u0027ouverture. Nouveau bouton « Ouvrir dans OrigPDF » dans l\u0027aperçu des PDF. Plus d\u0027écran vide quand la base de données est injoignable.",
+    "pub_date":  "2026-11-20T00:04:20Z",
+    "platforms":  {
+                      "windows-x86_64":  {
+                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTYXZEMEpPS2k1YmU0MTdlZDlMREQrcndya1VLZ2lkSE91SXFPSk5YVlI5SnpQVjBYK2l2UGRLY1psZ1VYQTlYVWVkYWRjSUxmd1poYUpLb2tTd3BiaW5pN1dKb1ZDd0FVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MTMzMDE5CWZpbGU6VHV0ZWxsaWFfMi4xLjFfeDY0LXNldHVwLmV4ZQpSMHRSbjdqWXo5Wko5di9wLzhJRDJnZ0dKVCtHN2NxbkpjNFQwTmk2Vm5iYzM3NmNKek1ZeXZETytRQWh6MTJ2aFErMDU2Y25PUjQzdHRkT2xzMmtBZz09Cg==",
+                                             "url":  "https://www.origai.fr/releases/tutellia/Tutellia_2.1.1_x64-setup.exe"
+                                         }
+                  }
 }
